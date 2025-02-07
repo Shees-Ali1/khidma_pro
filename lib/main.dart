@@ -1,31 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'home_page.dart';
+import 'package:get/get.dart';
+import 'authentication/login.dart';
+import 'authentication/signup.dart';
+import 'home_screen.dart';
 
 void main() {
-  runApp(
-    BlocProvider(
-      create: (context) => SomeBloc(), // Add your actual BLoC here
-      child: const MyApp(),
-    ),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Bloc Demo',
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      initialRoute: '/home',
+      getPages: [
+        GetPage(name: '/signup', page: () => SignupScreen()),
+        GetPage(name: '/login', page: () => LoginScreen()),
+        GetPage(name: '/home', page: () => HomeScreen()),
+      ],
     );
   }
-}
-
-// Replace with your actual Bloc
-class SomeBloc extends Cubit<int> {
-  SomeBloc() : super(0);
 }
