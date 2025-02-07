@@ -8,6 +8,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Center(
+            child: Text('Start of Khidma Prooooo',style: TextStyle(fontWeight: FontWeight.w700,fontSize:25 ),),
+          )
+        ],
+      ),
     );
   }
 }
