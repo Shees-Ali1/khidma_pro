@@ -17,7 +17,7 @@ class Availability extends StatelessWidget {
     final AvailabilityController controller = Get.put(AvailabilityController());
     return Center(
       child: Container(
-        width: 333.w,
+
         height: 90.h,
         decoration: BoxDecoration(
           color: announcementMainContainer,
@@ -33,13 +33,16 @@ class Availability extends StatelessWidget {
                 "Availability",
                 style: TextStyles.availability(),
               ),
+              SizedBox(width: 34.w,),
               // Use Obx to listen for changes in the RxBool
               Obx(() => Switch(
+
                 value: controller.isAvailable.value, // Reactive value
                 onChanged: (value) {
                   controller.isAvailable.value = value; // Update the reactive value
                 },
-                activeColor: Colors.green, // Green color when the switch is on
+                activeTrackColor: Color.fromRGBO(107, 194, 0, 0.54),
+                activeColor: Color.fromRGBO(0, 212, 7, 1), // Green color when the switch is on
                 inactiveThumbColor: Colors.grey, // Color for the switch when off
                 inactiveTrackColor: Colors.grey[300], // Background color when off
               )),

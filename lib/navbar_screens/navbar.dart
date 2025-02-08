@@ -19,7 +19,7 @@ class BottomBar extends StatelessWidget {
     final BottomBarController controller = Get.put(BottomBarController());
 
     final List<Widget> screens = [
-      const HomePage(),
+       HomePage(),
       const BookingScreen(),
       const ChatScreen(),
       const ProfileScreen(),

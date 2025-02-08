@@ -26,7 +26,7 @@ class ScrollableAnnouncementWidget extends StatelessWidget {
 
     return Center(
       child: Container(
-        width: 333.w,
+
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
           border: Border.all(
