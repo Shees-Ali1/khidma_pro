@@ -46,7 +46,17 @@ class TextStyles {
       letterSpacing: 0, // Set letter spacing
       color: backgroundColor, // Set the text color (you can adjust it)
     );
-  } static TextStyle availability() {
+  } static TextStyle dropDownText() {
+    return GoogleFonts.jost( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.normal
+      , // Set bold weight for title
+      fontSize: 11.sp, // Set the size in sp for scaling
+      height: 22.23 / 20, // Set line height (line height / font size)
+      letterSpacing: 0, // Set letter spacing
+      color: backgroundColor, // Set the text color (you can adjust it)
+    );
+  }
+  static TextStyle availability() {
     return GoogleFonts.inter( // Use GoogleFonts to load the Jost font
       fontWeight: FontWeight.w600
       , // Set bold weight for title
