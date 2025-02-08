@@ -41,6 +41,8 @@ dependencies:
   persistent_bottom_nav_bar:
   image_picker:
   get:
+  smooth_page_indicator:
+
 
 dev_dependencies:
   flutter_test:
