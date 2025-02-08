@@ -20,7 +20,7 @@ class OnBoardingThree extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(
-            height: 80.h,
+            height: 90.h,
           ),
           ///  Text Interactive Learning Courses & Quizzes.
           Padding(

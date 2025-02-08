@@ -32,7 +32,7 @@ class OnBoardingOne extends StatelessWidget {
               )),
 
           SizedBox(
-            height: 55.81.h,
+            height: 40.81.h,
           ),
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 11.w),

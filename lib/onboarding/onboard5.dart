@@ -1,23 +1,22 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:khidma_pro/consts/colors.dart';
 
-
+import '../consts/colors.dart';
 import '../consts/images.dart';
 import '../consts/text.dart';
 
 
-class OnBoardingTwo extends StatelessWidget {
-  const OnBoardingTwo({super.key});
+
+class OnBoardingFive extends StatelessWidget {
+  const OnBoardingFive({super.key});
 
   @override
   Widget build(BuildContext context) {
     final PageController _pageController = PageController(viewportFraction: 1);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:Colors.white,
       body: Column(
         children: [
           SizedBox(
@@ -27,46 +26,50 @@ class OnBoardingTwo extends StatelessWidget {
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 14.w),
               child: CustomText(
-                text: 'Quick and Easy Bookings',
+                text: 'We Value Your Feedback',
                 color: blackColor,
                 fontWeight: FontWeight.w700,
                 fontSize: 26.54.sp,
               )),
           SizedBox(
-            height: 55.h,
+            height: 55.81.h,
           ),
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 11.w),
               child: CustomText(
                 text:
-                'Schedule professional cleaning services in seconds, customized to your needs.',
+                'Rate your service and help us improve to serve you better.',
                 textAlign: TextAlign.center,
                 color: greyColor,
                 fontWeight: FontWeight.w600,
                 fontSize: 15.17.sp,
               )),
           SizedBox(
-            height: 70.h,
+            height: 68.h,
           ),
           Expanded(
             child: Container(
               width: double.infinity,
-              decoration:  BoxDecoration(
+              decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(eclipse),
                       fit: BoxFit.fill)),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    height: 123.h,
+
+                  Image.asset(
+                    onboard5,
+                    height: 240.h,
+                    width: 240.w,
+                    fit: BoxFit.cover,
+
+
                   ),
                   SizedBox(
-                      height: 217.h,
-                      width: 217.w,
-                      child: Image.asset(
-                        onboard2,
-                        fit: BoxFit.contain,
-                      )),
+                    height: 59.h,
+                  ),
 
                 ],
               ),

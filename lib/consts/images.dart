@@ -1,8 +1,24 @@
-String  Splash = 'assets/images/landing1.png';
-String  backIcon = 'assets/images/left.png';
+/// * Login Images
+
+String  email = 'assets/images/email.png';
+String  password = 'assets/images/password.png';
+String  google = 'assets/images/google.png';
+String  facebook = 'assets/images/facebook.png';
+String  apple = 'assets/images/apple.png';
+
+String  topEclipse = 'assets/images/topEclipse.png';
+
+
+
+
+/// * Onboarding Images
+
+String  Splash = 'assets/images/logo.png';
 String  onboard1 = 'assets/images/onboard1.png';
 String  onboard2 = 'assets/images/onboard2.png';
 String  onboard3 = 'assets/images/onboard3.png';
+String  onboard4 = 'assets/images/onboard4.png';
+String  onboard5 = 'assets/images/onboard5.png';
 String  eclipse = 'assets/images/eclipse.png';
 
 

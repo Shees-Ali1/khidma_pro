@@ -5,6 +5,8 @@ class LoginController extends GetxController {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   var isLoading = false.obs;
+  var checkValue = false.obs;
+
 
   void login() async {
     isLoading.value = true;
@@ -14,6 +16,12 @@ class LoginController extends GetxController {
     Get.snackbar("Success", "Logged in successfully", snackPosition: SnackPosition.BOTTOM);
     Get.offAllNamed('/home'); // Navigate to home screen after login
   }
+
+  void toggleValue(bool value) {
+    checkValue.value = value;
+  }
+
+
 
   @override
   void onClose() {

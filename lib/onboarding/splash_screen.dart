@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 import 'package:khidma_pro/home_screen.dart';
 import 'package:khidma_pro/onboarding/main_onboarding.dart';
@@ -29,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+backgroundColor: backgroundColor,
       body: Padding(
         padding:  EdgeInsets.symmetric(horizontal: 8.w),
         child: Column(

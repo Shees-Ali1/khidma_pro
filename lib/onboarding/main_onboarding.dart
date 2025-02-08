@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/consts/colors.dart';
+import 'package:khidma_pro/onboarding/onboard4.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../authentication/login.dart';
 import 'onboard1.dart';
 import 'onboard2.dart';
 import 'onboard3.dart';
+import 'onboard5.dart';
 
 
 
@@ -28,19 +30,19 @@ class _MainOnBoardingViewState extends State<MainOnBoardingView> {
 
   void _moveToNextPage() {
     // Check if there is a next page
-    if (currentpage < 2) {
+    if (currentpage < 4) {
       pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
       );
-    } else if (currentpage == 2) {
+    } else if (currentpage == 4) {
       Get.offAll(LoginScreen());
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    double progress = (currentpage + 1) / 3;
+    double progress = (currentpage + 1) / 5;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -58,6 +60,8 @@ class _MainOnBoardingViewState extends State<MainOnBoardingView> {
               OnBoardingOne(),
               OnBoardingTwo(),
               OnBoardingThree(),
+              OnBoardingFour(),
+              OnBoardingFive(),
 
             ],
           ),
@@ -80,7 +84,7 @@ class _MainOnBoardingViewState extends State<MainOnBoardingView> {
                       dotColor: Colors.white,
                     ),
                     controller: pageController,
-                    count: 3,
+                    count: 5,
                   ),
 
                   // Arrow button with circular progress
@@ -111,9 +115,8 @@ class _MainOnBoardingViewState extends State<MainOnBoardingView> {
                             strokeWidth: 1.5,
                             backgroundColor:
                             Colors.white.withOpacity(0.5),
-                            valueColor: const AlwaysStoppedAnimation<Color>(
-                              Colors.lightGreenAccent,
-                            ),
+                            valueColor: AlwaysStoppedAnimation<Color>(greenColor),
+
                           ),
                         ),
                       ],
