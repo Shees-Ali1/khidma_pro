@@ -46,7 +46,8 @@ class TextStyles {
       letterSpacing: 0, // Set letter spacing
       color: backgroundColor, // Set the text color (you can adjust it)
     );
-  } static TextStyle availability() {
+  }
+  static TextStyle availability() {
     return GoogleFonts.inter( // Use GoogleFonts to load the Jost font
       fontWeight: FontWeight.w600
       , // Set bold weight for title
