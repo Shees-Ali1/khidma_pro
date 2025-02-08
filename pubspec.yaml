@@ -37,12 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_screenutil:
   google_fonts:
-  intl_phone_number_input: ^0.7.4
-  persistent_bottom_nav_bar:
   image_picker:
   get:
-  smooth_page_indicator:
-
+  circle_nav_bar: ^2.2.0
 
 dev_dependencies:
   flutter_test:

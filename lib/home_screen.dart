@@ -15,10 +15,10 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Center(
+          const Center(
             child: Text('Start of Khidma Prooooo',style: TextStyle(fontWeight: FontWeight.w700,fontSize:25 ),),
           ),
-          CustomText(
+          const CustomText(
             text: 'Hello, Flutter!',
             fontSize: 20,
             fontWeight: FontWeight.bold,
