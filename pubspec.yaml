@@ -67,6 +67,8 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/nav-icon/
+    - assets/app-bar/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
