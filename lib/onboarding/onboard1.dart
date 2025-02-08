@@ -21,7 +21,7 @@ class OnBoardingOne extends StatelessWidget {
             height: 70.h,
           ),
 
-          /// Text The best Medical Device Library in the world.
+          // Heading 1
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: CustomText(
@@ -34,6 +34,8 @@ class OnBoardingOne extends StatelessWidget {
           SizedBox(
             height: 40.81.h,
           ),
+
+          // ? Short Heading
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 11.w),
               child: CustomText(

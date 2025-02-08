@@ -5,7 +5,9 @@ import 'package:get/get.dart'; // Import GetX package for state management
 import 'package:khidma_pro/navbar_screens/navbar.dart';
 
 import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityController.dart';
-import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart'; // Your main navigation screen
+import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
+import 'controllers/auth_controllers/login_controller.dart';
+import 'onboarding/splash_screen.dart'; // Your main navigation screen
 
 // Import controllers for managing app logic
 
@@ -26,6 +28,7 @@ void main() async {
 
   // Run the app after initialization
   runApp(const MyApp());
+  Get.put(LoginController());
 }
 
 class MyApp extends StatelessWidget {
@@ -39,8 +42,8 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true, // Enable split-screen mode for better UI on large screens
       builder: (context, child) {
         return const GetMaterialApp(
-          debugShowCheckedModeBanner: false, // Disable debug banner for production
-          home: BottomBar(), // The main screen of your app
+          debugShowCheckedModeBanner: false,
+          home: SplashScreen(),
         );
       },
     );

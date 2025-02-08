@@ -12,11 +12,6 @@ import 'onboard2.dart';
 import 'onboard3.dart';
 import 'onboard5.dart';
 
-
-
-
-
-
 class MainOnBoardingView extends StatefulWidget {
   const MainOnBoardingView({super.key});
 
