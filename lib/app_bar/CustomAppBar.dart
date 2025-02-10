@@ -63,18 +63,26 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 )
               else if (showBackArrow)
-                IconButton(
-                  icon: const Icon(Icons.arrow_back),
-                  onPressed: () {
-                    Navigator.of(context).pop(); // Go back on back arrow tap
-                  },
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(10.0),
+
+                    width: 38.w,
+                    height: 38.h,
+                    decoration: BoxDecoration(
+                      color: skyblue,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset(back_arrow, color: backgroundColor), // Hamburger menu icon (3 bars)
+                  ),
                 ),
               Text(
                 title, // Title of the AppBar
                 style: TextStyle(
-                  fontSize: 20.sp,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  fontSize: 22.sp,
+                  fontWeight: FontWeight.w600,
+                  color: skyblue,
                 ),
               ),
               Row(

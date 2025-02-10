@@ -27,6 +27,36 @@ class TextStyles {
     );
   }
 
+  static TextStyle titleTextBig() {
+    return GoogleFonts.jost( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.bold, // Set bold weight for title
+      fontSize: 24.sp, // Set the size in sp for scaling
+      height: 22.23 / 18, // Set line height (line height / font size)
+      letterSpacing: 0, // Set letter spacing
+      color: blackColor, // Set the text color (you can adjust it)
+    );
+  }
+
+  static TextStyle smallTextBlack() {
+    return GoogleFonts.jost( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.w400, // Set bold weight for title
+      fontSize: 16.sp, // Set the size in sp for scaling
+      height: 22.23 / 18, // Set line height (line height / font size)
+      letterSpacing: 0, // Set letter spacing
+      color: blackColor, // Set the text color (you can adjust it)
+    );
+  }
+
+  static TextStyle smallContainerText() {
+    return GoogleFonts.sora( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.w600, // Set bold weight for title
+      fontSize: 10.sp, // Set the size in sp for scaling
+      height: 22.23 / 18, // Set line height (line height / font size)
+      letterSpacing: 0, // Set letter spacing
+      color: whiteColor, // Set the text color (you can adjust it)
+    );
+  }
+
   static TextStyle announcementsText() {
     return GoogleFonts.jost( // Use GoogleFonts to load the Jost font
       fontWeight: FontWeight.w600

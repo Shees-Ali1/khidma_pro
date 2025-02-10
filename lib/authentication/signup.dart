@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:khidma_pro/authentication/login.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/widgets/buttons.dart';
 import '../consts/images.dart';
@@ -8,6 +9,8 @@ import '../widgets/Custom_dropdown.dart';
 import '../widgets/textfield.dart';
 
 class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -30,8 +33,6 @@ class SignupScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: 50.h),
-
-
                     SizedBox(
                       height: 85.h,
                       width: 267.w,
@@ -42,7 +43,10 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(height: 70.h),
                     Text(
                       'Sign up',
-                      style: TextStyle(fontSize: 35.sp, color: skyblue, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          fontSize: 35.sp,
+                          color: skyblue,
+                          fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: 50.h),
                   ],
@@ -101,14 +105,21 @@ class SignupScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: CustomDropdownField(
                   label: 'Select Gender',
-                  items: ['Male', 'Female', 'Other'],
+                  items: const ['Male', 'Female', 'Other'],
                   dropdownIconImage: arrow_down,
                   onChanged: (value) {},
                 ),
               ),
-
               SizedBox(height: 33.h),
-              CustomButton(text: 'Continue',textColor: skyblue, onPressed: (){},color: Colors.white,width: 311.w,),
+              CustomButton(
+                text: 'Continue',
+                textColor: skyblue,
+                onPressed: () {
+                  Get.to(LoginScreen());
+                },
+                color: Colors.white,
+                width: 311.w,
+              ),
               SizedBox(height: 14.h),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 18.w),
@@ -121,7 +132,10 @@ class SignupScreen extends StatelessWidget {
                       ),
                       TextSpan(
                         text: 'Terms of Services',
-                        style: TextStyle(fontSize: 14.sp, color: backgroundColor, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 14.sp,
+                            color: backgroundColor,
+                            fontWeight: FontWeight.bold),
                       ),
                       TextSpan(
                         text: ' and ',
@@ -129,7 +143,10 @@ class SignupScreen extends StatelessWidget {
                       ),
                       TextSpan(
                         text: 'Privacy Policy.',
-                        style: TextStyle(fontSize: 14.sp, color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 14.sp,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:khidma_pro/consts/colors.dart'; // Import your colors file
 
 class CustomButton extends StatelessWidget {
   final String text;
@@ -11,17 +12,17 @@ class CustomButton extends StatelessWidget {
   final FontWeight fontWeight;
   final double fontSize;
 
-  const CustomButton({
+   CustomButton({
     super.key,
     required this.text,
     required this.onPressed,
     this.height = 51,
     this.width, // Optional width
-    this.color = Colors.blue,
+    Color? color, // Nullable color parameter
     this.textColor = Colors.white,
     this.fontWeight = FontWeight.w600,
     this.fontSize = 16,
-  });
+  }) : color = color ?? skyblue; // Assign default value in the constructor
 
   @override
   Widget build(BuildContext context) {

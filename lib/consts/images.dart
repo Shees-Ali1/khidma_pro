@@ -23,6 +23,12 @@ String  onboard4 = 'assets/images/onboard4.png';
 String  onboard5 = 'assets/images/onboard5.png';
 String  eclipse = 'assets/images/eclipse.png';
 
+// * Small Container Images
+
+String  upload = 'assets/images/upload.png';
+String  location = 'assets/images/location.png';
+String  Record = 'assets/images/Record.png';
+
 
 
 /// *BOTTOM BAR IMAGES
@@ -37,6 +43,7 @@ String  profile = 'assets/nav-icon/Profile.png';
 /// *APP BAR IMAGES
 String  wallet = 'assets/app-bar/wallet.png';
 String  notification ='assets/app-bar/notification.png';
+String  back_arrow ='assets/app-bar/back_arrow.png';
 
 
 /// *APP BAR IMAGES

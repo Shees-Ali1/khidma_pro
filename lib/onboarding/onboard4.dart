@@ -6,22 +6,21 @@ import '../consts/colors.dart';
 import '../consts/images.dart';
 import '../consts/text.dart';
 
-
-
 class OnBoardingFour extends StatelessWidget {
   const OnBoardingFour({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final PageController _pageController = PageController(viewportFraction: 1);
+    final PageController pageController = PageController(viewportFraction: 1);
 
     return Scaffold(
-      backgroundColor:Colors.white,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           SizedBox(
             height: 90.h,
           ),
+
           ///  Text Interactive Learning Courses & Quizzes.
           Padding(
               padding: EdgeInsets.symmetric(horizontal: 14.w),
@@ -38,7 +37,7 @@ class OnBoardingFour extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 11.w),
               child: CustomText(
                 text:
-                'Enable customers to track their cleaner’s location and progress live.',
+                    'Enable customers to track their cleaner’s location and progress live.',
                 textAlign: TextAlign.center,
                 color: greyColor,
                 fontWeight: FontWeight.w600,
@@ -52,25 +51,20 @@ class OnBoardingFour extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(eclipse),
-                      fit: BoxFit.fill)),
+                      image: AssetImage(eclipse), fit: BoxFit.fill)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-
                   Image.asset(
-                    onboard3,
-                    height: 240.h,
+                    onboard4,
+                    //  height: 240.h,
                     width: 240.w,
                     fit: BoxFit.cover,
-
-
                   ),
                   SizedBox(
                     height: 59.h,
                   ),
-
                 ],
               ),
             ),

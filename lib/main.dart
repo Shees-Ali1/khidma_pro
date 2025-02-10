@@ -3,15 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/navbar_screens/User_navbar.dart';
-import 'package:khidma_pro/navbar_screens/navbar.dart';
-
 import 'Customer/Home/user_home_screen.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityController.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
 import 'controllers/auth_controllers/login_controller.dart';
-import 'onboarding/splash_screen.dart'; // Your main navigation screen
-
-// Import controllers for managing app logic
+import 'onboarding/splash_screen.dart';
 
 
 void main() async {
@@ -23,7 +19,6 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // Initialize controllers for the app's state management
   Get.put(AvailabilityController());
   Get.put(BottomBarController());
   Get.put(HomeController());
@@ -39,9 +34,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 800), // Set your design size for ScreenUtil
-      minTextAdapt: true, // Ensure text scaling is based on design size
-      splitScreenMode: true, // Enable split-screen mode for better UI on large screens
+      designSize: const Size(360, 800),
+      minTextAdapt: true,
+      splitScreenMode:
+          true,
       builder: (context, child) {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,

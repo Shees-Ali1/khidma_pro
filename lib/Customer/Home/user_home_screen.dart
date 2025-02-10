@@ -5,6 +5,8 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/Customer/Home/services_container.dart';
 import 'package:khidma_pro/Customer/Home/sliding_menu.dart';
+import 'package:khidma_pro/Customer/Home/taskDescription.dart';
+import 'package:khidma_pro/Customer/Home/task_description_video.dart';
 import 'package:khidma_pro/app_bar/CustomAppBar.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
@@ -87,6 +89,9 @@ class _UserHomeScreenState extends State<UserHomeScreen> {
                           ];
                           final service = services[index];
                           return GestureDetector(
+                            onTap: (){
+                              Get.to(TaskDescription());
+                            },
                             child: ServicesContainer(
                               image: service["image"]!, // Use the null assertion operator (!)
                               title: service["title"]!, // Use the null assertion operator (!)
