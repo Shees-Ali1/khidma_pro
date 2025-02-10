@@ -112,7 +112,7 @@ class ScrollableAnnouncementWidget extends StatelessWidget {
         image: announcement, // Ensure the image path is correct
       ),
       Announcement(
-        title: 'Announcement 2',
+        title: 'New Offer',
         date: '17 Sep 2024',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tincidunt sagittis sapien, id lobortis metus. Morbi luctus, sapien sed aliquam vestibulum, arcu nibh fermentum',
         image: announcement,

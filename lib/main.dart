@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // For setting preferred orientations
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart'; // Import GetX package for state management
+import 'package:get/get.dart';
+import 'package:khidma_pro/navbar_screens/User_navbar.dart';
 import 'package:khidma_pro/navbar_screens/navbar.dart';
 
+import 'Customer/Home/user_home_screen.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityController.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
 import 'controllers/auth_controllers/login_controller.dart';
@@ -13,7 +15,6 @@ import 'onboarding/splash_screen.dart'; // Your main navigation screen
 
 
 void main() async {
-  // Ensure Flutter bindings are initialized before using GetX and ScreenUtil
   WidgetsFlutterBinding.ensureInitialized();
 
   // Set the preferred orientations to portrait mode
@@ -25,6 +26,7 @@ void main() async {
   // Initialize controllers for the app's state management
   Get.put(AvailabilityController());
   Get.put(BottomBarController());
+  Get.put(HomeController());
 
   // Run the app after initialization
   runApp(const MyApp());
@@ -43,7 +45,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+          home: UserBottomBar(),
         );
       },
     );

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/widgets/buttons.dart';
 import '../consts/images.dart';
+import '../widgets/Custom_dropdown.dart';
 import '../widgets/textfield.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -30,7 +31,7 @@ class SignupScreen extends StatelessWidget {
                   children: [
                     SizedBox(height: 50.h),
 
-                    SizedBox(height: 30.h),
+
                     SizedBox(
                       height: 85.h,
                       width: 267.w,
@@ -81,6 +82,28 @@ class SignupScreen extends StatelessWidget {
                     color: skyblue,
                     size: 18.sp,
                   ),
+                ),
+              ),
+              SizedBox(height: 16.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
+                child: CustomInputField(
+                  label: 'Confirm Password',
+                  prefixIcon: Icon(
+                    Icons.lock_outline,
+                    color: skyblue,
+                    size: 18.sp,
+                  ),
+                ),
+              ),
+              SizedBox(height: 16.h),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.w),
+                child: CustomDropdownField(
+                  label: 'Select Gender',
+                  items: ['Male', 'Female', 'Other'],
+                  dropdownIconImage: arrow_down,
+                  onChanged: (value) {},
                 ),
               ),
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';  // Import GetX package
+import 'package:khidma_pro/Customer/Home/user_home_screen.dart';
 import '../Service-Provider/Home/home_page.dart';
 import '../consts/colors.dart';
 import '../consts/images.dart';
@@ -9,16 +10,16 @@ import '../consts/text_styles.dart';
 import '../controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
 
 
-class BottomBar extends StatelessWidget {
-  const BottomBar({super.key});
+class UserBottomBar extends StatelessWidget {
+  const UserBottomBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     // Instantiate the controller
-    final BottomBarController controller = Get.put(BottomBarController());
+    final UserBottomBarController controller = Get.put(UserBottomBarController());
 
     final List<Widget> screens = [
-       HomePage(),
+      UserHomeScreen(),
       const BookingScreen(),
       const ChatScreen(),
       const ProfileScreen(),

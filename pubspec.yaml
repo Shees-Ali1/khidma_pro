@@ -41,7 +41,9 @@ dependencies:
   get:
   circle_nav_bar: ^2.2.0
   smooth_page_indicator:
-  flutter_svg: 
+  flutter_svg:
+  flutter_staggered_grid_view:
+  cached_network_image:
 
 dev_dependencies:
   flutter_test:

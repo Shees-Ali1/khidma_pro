@@ -6,6 +6,7 @@ import 'package:khidma_pro/authentication/signup.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 import 'package:khidma_pro/consts/text.dart';
+import 'package:khidma_pro/navbar_screens/User_navbar.dart';
 import 'package:khidma_pro/navbar_screens/navbar.dart';
 import 'package:khidma_pro/widgets/buttons.dart';
 import 'package:khidma_pro/widgets/textfield.dart';
@@ -171,7 +172,7 @@ class LoginScreen extends GetView<LoginController> {
     return CustomButton(
       text: 'Login',
       onPressed: () {
-        Get.to(BottomBar());
+        Get.to(UserBottomBar());
       },
       color: skyblue,
       width: 311.w,
