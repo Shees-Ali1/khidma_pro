@@ -160,15 +160,15 @@ class WalletScreen extends StatelessWidget {
                             color: skyblue,
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                              image: AssetImage(arrow_down),
+                              image: AssetImage(arrow_right),
                               scale: 4,
                             )),
                       ),
                       title: Text(
                         'Credit',
-                        style: jost500(13.17, skyblue),
+                        style: jost400(13.17, skyblue),
                       ),
-                      subtitle: Text('From Starbucks',
+                      subtitle: Text('To Starbucks',
                           style: jost400(12.17, skyblue)),
                       trailing:
                       Text('\$ 3,110', style: jost500(14.17, skyblue)),

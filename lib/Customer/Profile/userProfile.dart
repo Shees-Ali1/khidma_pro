@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:khidma_pro/app_bar/CustomAppBar.dart';
-
-import 'package:url_launcher/url_launcher.dart';
-import 'dart:io';
-
+import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
 import '../../app_bar/CAppBar.dart';
 import '../../authentication/role_screen.dart';
 import '../../consts/colors.dart';
@@ -95,7 +91,7 @@ class _EditProfileScreenState extends State<ProfileScreen> {
 
               ProfileButton(
                 onPressed: () {
-             //     Get.to(ReportsScreen());
+                  Get.to(WalletScreen());
                 },
                 label: "Wallet",
                 iconPath: profile_card,

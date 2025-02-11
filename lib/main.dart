@@ -3,13 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/navbar_screens/User_navbar.dart';
-import 'Customer/Home/task_description_video.dart';
-import 'Customer/Home/user_home_screen.dart';
-import 'Customer/Home/wallet_screen.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityController.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
 import 'controllers/auth_controllers/login_controller.dart';
-import 'navbar_screens/navbar.dart';
+import 'controllers/userControllers/homeController.dart';
 import 'onboarding/splash_screen.dart';
 
 
@@ -44,7 +41,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: BottomBar(),
+          home: UserBottomBar(),
         );
       },
     );

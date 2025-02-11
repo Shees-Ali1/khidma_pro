@@ -15,12 +15,9 @@ import '../../widgets/serviceAccepted.dart';
 class TechReviews extends StatefulWidget {
   const TechReviews({super.key});
 
-
-
   @override
   _TechReviewsState createState() => _TechReviewsState();
 }
-
 
 class _TechReviewsState extends State<TechReviews> {
   final Map<String, List<Map<String, String>>> reviewsData = {
@@ -196,26 +193,29 @@ class _TechReviewsState extends State<TechReviews> {
                     );
                   }).toList(),
                 ),
-                SizedBox(height: 12.h,),
+                SizedBox(
+                  height: 12.h,
+                ),
                 Row(
                   children: [
                     Expanded(
                         child: GestureDetector(
-                  onTap: (){
-    Get.back();
-    Get.bottomSheet(
-    isScrollControlled: true,
-    isDismissible: true,
-    enableDrag: true,
-      JobAcceptedBottomsheet(name: 'Ali', price: '69',),
-    );},
-                          child: CustomSmallContainers(
-                                                text: 'Accept',
-                                                height: 56.w,
-                                                textStyle: jost600(22.sp, whiteColor),
-                                                width: 150.w,
-                                              ),
-                        )),
+                      onTap: () {
+                        Get.bottomSheet(
+                          isScrollControlled: true,
+                          isDismissible: true,
+                          enableDrag: true,
+                          JobAcceptedBottomsheet(
+                          ),
+                        );
+                      },
+                      child: CustomSmallContainers(
+                        text: 'Accept',
+                        height: 56.w,
+                        textStyle: jost600(22.sp, whiteColor),
+                        width: 150.w,
+                      ),
+                    )),
                     SizedBox(
                       width: 14.w,
                     ),

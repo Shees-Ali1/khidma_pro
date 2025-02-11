@@ -8,10 +8,9 @@ import 'package:khidma_pro/widgets/paymentBottomSheet.dart';
 import '../consts/text_styles.dart';
 
 class JobAcceptedBottomsheet extends StatefulWidget {
-  const JobAcceptedBottomsheet({super.key, required this.name, required this.price});
+  const JobAcceptedBottomsheet({super.key, });
 
-  final String name;
-  final String price;
+
 
   @override
   State<JobAcceptedBottomsheet> createState() => _JobAcceptedBottomsheetState();
@@ -43,7 +42,7 @@ class _JobAcceptedBottomsheetState extends State<JobAcceptedBottomsheet> {
             SizedBox(height: 20.h,),
             Align(
               alignment: Alignment.center,
-              child: Text("Your Request has been successfully accepted with ${widget.name}. ", style: jost600(16.sp, skyblue), textAlign: TextAlign.center,),
+              child: Text("Your Request has been successfully accepted with Natalie Hales. ", style: jost600(16.sp, skyblue), textAlign: TextAlign.center,),
             ),
             SizedBox(height: 20.h,),
             Align(
