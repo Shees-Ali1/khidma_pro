@@ -14,6 +14,9 @@ String  gender = 'assets/images/gender.png';
 String  arrow_down = 'assets/images/arrow_down.png';
 String  calendar = 'assets/images/calendar.png';
 String  clock = 'assets/images/clock.png';
+String  bankImage = 'assets/images/ADCB.png';
+String  pencil = 'assets/images/pencil.png';
+String  withdraw = 'assets/images/withdraw.png';
 
 
 // * Profile Images
