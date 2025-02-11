@@ -12,6 +12,13 @@ String  arrow_down = 'assets/images/arrow_down.png';
 
 
 
+/// * Wallet Images
+String  wallet_back = 'assets/images/wallet_back.png';
+String  history = 'assets/images/wallet_back.png';
+String  arrow_downward = 'assets/images/arrow-down.png';
+String  arrow_right = 'assets/images/arrow-right.png';
+
+
 
 /// * Onboarding Images
 
