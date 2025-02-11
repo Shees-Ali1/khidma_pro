@@ -3,6 +3,9 @@ import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';  // Import GetX package
 import 'package:khidma_pro/Customer/Home/user_home_screen.dart';
+import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
+import '../Customer/Profile/tech_reviews.dart';
+import '../Customer/Profile/userProfile.dart';
 import '../Service-Provider/Home/home_page.dart';
 import '../consts/colors.dart';
 import '../consts/images.dart';
@@ -20,8 +23,8 @@ class UserBottomBar extends StatelessWidget {
 
     final List<Widget> screens = [
       UserHomeScreen(),
-      const BookingScreen(),
-      const ChatScreen(),
+      const TechReviews(),
+      const WalletScreen(),
       const ProfileScreen(),
     ];
 
@@ -159,13 +162,4 @@ class ChatScreen extends StatelessWidget {
   }
 }
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Profile Screen", style: TextStyle(fontSize: 24))),
-    );
-  }
-}

@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:khidma_pro/app_bar/CAppBar.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 
 
 import '../../app_bar/CustomAppBar.dart';
 import '../../authentication/role_screen.dart';
+import '../../consts/text_styles.dart';
 
 class WalletScreen extends StatelessWidget {
   const WalletScreen({super.key});
@@ -15,10 +17,7 @@ class WalletScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        title: 'Task Description',
-        showBackArrow: true,
-      ),
+      appBar:CAppBar(isMenu: false, isNotification: false, isTitle: true, isSecondIcon: false,title: 'Wallet',onBackTap: (){},),
       backgroundColor: backgroundColor,
 
       body: SingleChildScrollView(
@@ -44,6 +43,7 @@ class WalletScreen extends StatelessWidget {
                           style: GoogleFonts.inter(  // Replace 'Roboto' with any font you like
                             fontSize: 14.87.sp,
                             fontWeight: FontWeight.w600,
+                            color: skyblue
                           ),
                         ),
                         SizedBox(
@@ -54,6 +54,7 @@ class WalletScreen extends StatelessWidget {
                           style: GoogleFonts.inter(  // Replace 'Roboto' with any font you like
                             fontSize: 35.65.sp,
                             fontWeight: FontWeight.w700,
+                            color: skyblue
                           ),
                         ),
                       ],
@@ -100,7 +101,7 @@ class WalletScreen extends StatelessWidget {
                                   height: 5.h,
                                 ),
                                 Text('History',
-                                    style: jost400(12.sp, Color(0xffE8E7E7))),
+                                    style: jost400(12.sp, whiteColor)),
                               ],
                             )
                           ],
@@ -134,7 +135,7 @@ class WalletScreen extends StatelessWidget {
                               width: 17.66.w,
                             ),
                             Text('Add New Card',
-                                style: jost400(14.sp, Color(0xffE8E7E7))),
+                                style: jost400(14.sp, whiteColor)),
                           ],
                         ),
                       ),
@@ -165,10 +166,10 @@ class WalletScreen extends StatelessWidget {
                       ),
                       title: Text(
                         'Credit',
-                        style: jost400(13.17, skyblue),
+                        style: jost500(13.17, skyblue),
                       ),
                       subtitle: Text('From Starbucks',
-                          style: jost400(12.17, greyColor)),
+                          style: jost400(12.17, skyblue)),
                       trailing:
                       Text('\$ 3,110', style: jost500(14.17, skyblue)),
                     ),
@@ -190,7 +191,7 @@ class WalletScreen extends StatelessWidget {
                         style: jost400(13.17, skyblue),
                       ),
                       subtitle: Text('To Starbucks',
-                          style: jost400(12.17, greyColor)),
+                          style: jost400(12.17, skyblue)),
                       trailing:
                       Text('\$ 3,110', style: jost500(14.17, skyblue)),
                     ),
@@ -219,7 +220,7 @@ class WalletScreen extends StatelessWidget {
                         style: jost400(13.17, skyblue),
                       ),
                       subtitle: Text('To Starbucks',
-                          style: jost400(12.17, greyColor)),
+                          style: jost400(12.17, skyblue)),
                       trailing:
                       Text('\$ 3,110', style: jost500(14.17, skyblue)),
                     ),
@@ -241,7 +242,7 @@ class WalletScreen extends StatelessWidget {
                         style: jost400(13.17, skyblue),
                       ),
                       subtitle: Text('To Starbucks',
-                          style: jost400(12.17, greyColor)),
+                          style: jost400(12.17, skyblue)),
                       trailing:
                       Text('\$ 3,110', style: jost500(14.17, skyblue)),
                     ),

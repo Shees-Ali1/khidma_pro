@@ -132,14 +132,6 @@ class UserNameWidget extends StatelessWidget {
   }
 }
 
-TextStyle jost700(double fontSize, Color color) {
-  return TextStyle(
-    fontSize: fontSize,
-    fontWeight: FontWeight.w700,
-    fontFamily: 'Jost',
-    color: color,
-  );
-}
 
 
 class HomeController extends GetxController {

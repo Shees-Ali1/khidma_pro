@@ -7,6 +7,9 @@ import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 import 'package:khidma_pro/widgets/buttons.dart';
 
+import '../Customer/Home/user_home_screen.dart';
+import '../consts/text_styles.dart';
+
 
 class RoleScreen extends StatefulWidget {
   const RoleScreen({Key? key}) : super(key: key);
@@ -203,33 +206,7 @@ class _RoleScreenState extends State<RoleScreen> {
 
 
 
-// Example font style definitions. Adjust as needed for your project.
-TextStyle jost700(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
-    fontWeight: FontWeight.w700,
-    fontSize: fontSize,
-    color: color,
-  );
-}
 
-TextStyle jost500(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
-    fontWeight: FontWeight.w500,
-    fontSize: fontSize,
-    color: color,
-  );
-}
-
-TextStyle jost400(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
-    fontWeight: FontWeight.w400,
-    fontSize: fontSize,
-    color: color,
-  );
-}
 
 //Example controller, implement in your project
 class SignupController extends GetxController {

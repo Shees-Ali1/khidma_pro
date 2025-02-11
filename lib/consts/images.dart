@@ -1,3 +1,6 @@
+String  tech_2 = 'assets/images/tech_2.png';
+
+
 /// * Login Images
 
 String  email = 'assets/images/email.png';
@@ -11,10 +14,23 @@ String  gender = 'assets/images/gender.png';
 String  arrow_down = 'assets/images/arrow_down.png';
 
 
+// * Profile Images
+String  profile_info = 'assets/images/user.png';
+String  profile_image = 'assets/images/profile_image.png';
+String  walletFill = 'assets/images/saved_address.png';
+String  helpsupport = 'assets/images/helpsupport.png';
+String  terms = 'assets/images/terms.png';
+String  profile_card = 'assets/images/profile_card.png';
+String  user = 'assets/images/user.png';
+String  profile_arrow = 'assets/images/profile_arrow.png';
+String  logout = 'assets/images/logout.png';
+
+
+
 
 /// * Wallet Images
-String  wallet_back = 'assets/images/wallet_back.png';
-String  history = 'assets/images/wallet_back.png';
+String  wallet_back = 'assets/images/Graphic.png';
+String  history = 'assets/images/history.png';
 String  arrow_downward = 'assets/images/arrow-down.png';
 String  arrow_right = 'assets/images/arrow-right.png';
 

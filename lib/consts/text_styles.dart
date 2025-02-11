@@ -97,3 +97,40 @@ class TextStyles {
     );
   }
 }
+
+
+TextStyle jost700(double fontSize, Color color) {
+  return TextStyle(
+    fontFamily: 'Jost',
+    fontWeight: FontWeight.w700,
+    fontSize: fontSize,
+    color: color,
+  );
+}
+
+TextStyle jost500(double fontSize, Color color) {
+  return TextStyle(
+    fontFamily: 'Jost',
+    fontWeight: FontWeight.w500,
+    fontSize: fontSize,
+    color: color,
+  );
+}
+
+TextStyle jost600(double fontSize, Color color) {
+  return TextStyle(
+    fontFamily: 'Jost',
+    fontWeight: FontWeight.w600,
+    fontSize: fontSize,
+    color: color,
+  );
+}
+
+TextStyle jost400(double fontSize, Color color) {
+  return TextStyle(
+    fontFamily: 'Jost',
+    fontWeight: FontWeight.w400,
+    fontSize: fontSize,
+    color: color,
+  );
+}

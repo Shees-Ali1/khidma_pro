@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khidma_pro/consts/colors.dart';
 
 import '../../authentication/role_screen.dart';
+import '../../consts/text_styles.dart';
 
 
 class ServicesContainer extends StatelessWidget {
