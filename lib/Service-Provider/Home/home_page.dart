@@ -10,6 +10,7 @@ import '../../drawer/CustomDrawer.dart';
 import '../../widgets/Availability.dart';
 import '../../widgets/MyPopupMenuButton.dart';
 import '../../widgets/ScrollableAnnouncementWidget.dart';
+import '../../widgets/service-card.dart';
 
 class HomePage extends StatelessWidget {
    HomePage({super.key});
@@ -43,10 +44,10 @@ class HomePage extends StatelessWidget {
               ),
               /// & Announcement
               const ScrollableAnnouncementWidget(),
-              SizedBox(height: 7,),
+              SizedBox(height: 7.h,),
               /// & Availability
               const Availability(),
-              SizedBox(height: 7,),
+              SizedBox(height: 7.h,),
 
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,7 +55,9 @@ class HomePage extends StatelessWidget {
                   DropdownWidget(isEnabled: false,),
                   DropdownWidget(isEnabled: true,),
                 ],
-              )
+              ),
+              SizedBox(height: 7.h,),
+             const ServiceCard()
 
 
             ],
