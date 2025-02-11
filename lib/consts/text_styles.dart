@@ -134,3 +134,12 @@ TextStyle jost400(double fontSize, Color color) {
     color: color,
   );
 }
+
+TextStyle jost300(double fontSize, Color color) {
+  return TextStyle(
+    fontFamily: 'Jost',
+    fontWeight: FontWeight.w300,
+    fontSize: fontSize,
+    color: color,
+  );
+}

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/navbar_screens/User_navbar.dart';
+import 'Customer/Home/task_description_video.dart';
 import 'Customer/Home/user_home_screen.dart';
 import 'Customer/Home/wallet_screen.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityController.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: UserBottomBar(),
+          home: SplashScreen(),
         );
       },
     );

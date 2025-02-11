@@ -1,8 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:khidma_pro/consts/colors.dart';
+import 'package:khidma_pro/consts/images.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../consts/text_styles.dart';
+import '../../widgets/cancel_dialog_box.dart';
+import '../../widgets/smallContainers.dart';
 
 class TaskDescription_video extends StatefulWidget {
   const TaskDescription_video({super.key, });
@@ -42,7 +49,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
   @override
   Widget build(BuildContext context) {
     // Static data for demonstration
-    final String title = "Fix Leaking Pipe";
+    final String title = "House Cleaning";
     final String status = "In Progress";
     final String name = "John Doe";
     final String description = "The pipe under the kitchen sink is leaking and needs to be fixed.";
@@ -64,13 +71,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Task Description'),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -81,13 +82,13 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
               SizedBox(height: 16.h),
               Text(
                 title,
-                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.bold,color: skyblue),
               ),
               SizedBox(height: 9.h),
               Container(
                 padding: EdgeInsets.only(bottom: 16.h),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: skyblue,
                   borderRadius: BorderRadius.circular(12.r),
                 ),
                 child: Column(
@@ -96,9 +97,9 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5.w),
+                          padding: EdgeInsets.symmetric(vertical: 2, horizontal: 15.w),
                           decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: Colors.grey[100],
                             borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(10.5.r),
                             ),
@@ -108,16 +109,17 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                             style: TextStyle(fontSize: 11.sp, color: Colors.black),
                           ),
                         ),
+                        Text('ID # 2145',style: jost500(11.sp, whiteColor),),
                         Container(
-                          padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5.w),
+                          padding: EdgeInsets.symmetric(vertical: 2, horizontal: 15.w),
                           decoration: BoxDecoration(
-                            color: Colors.grey[300],
+                            color: Colors.grey[100],
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(10.5.r),
                             ),
                           ),
                           child: Text(
-                            "Order #12345",
+                            "House Cleaning",
                             style: TextStyle(fontSize: 11.sp, color: Colors.black),
                           ),
                         ),
@@ -135,23 +137,23 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                               children: [
                                 Text(
                                   name,
-                                  style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
+                                  style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold,color: whiteColor),
                                 ),
                                 SizedBox(height: 6.h),
                                 Row(
                                   children: [
-                                    Icon(Icons.location_on, size: 15),
+                                    Icon(Icons.location_on, size: 15,color: whiteColor,),
                                     SizedBox(width: 3.w),
                                     Text(
                                       city,
-                                      style: TextStyle(fontSize: 11.sp),
+                                      style: jost300(11.sp, whiteColor),
                                     ),
                                   ],
                                 ),
                                 SizedBox(height: 5.h),
                                 Text(
                                   description,
-                                  style: TextStyle(fontSize: 11.sp),
+                                  style: jost300(11.sp, whiteColor)
                                 ),
                               ],
                             ),
@@ -162,7 +164,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(12.w),
                               image: DecorationImage(
-                                image: NetworkImage(imageUrls[0]),
+                                image: AssetImage(calendar),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -185,14 +187,33 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                                 borderRadius: BorderRadius.circular(12.r),
                               ),
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Text(
-                                    "Service started at: ",
-                                    style: TextStyle(fontSize: 11.sp),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 16.h ,
+                                          width: 16.w,
+                                          child: Image.asset(calendar)),
+                                      SizedBox(width: 10.w,),
+                                      Text(
+                                        "Mon, Dec 23 ",
+                                        style: TextStyle(fontSize: 11.sp),
+                                      ),
+                                    ],
                                   ),
-                                  Text(
-                                    "$formattedDate at $formattedTime",
-                                    style: TextStyle(fontSize: 9.sp),
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                          height: 18.h ,
+                                          width: 18.w,
+                                          child: Image.asset(clock)),
+                                      SizedBox(width: 5.w,),
+                                      Text(
+                                        "12:00",
+                                        style: TextStyle(fontSize: 11.sp),
+                                      ),
+                                    ],
                                   ),
                                 ],
                               ),
@@ -201,6 +222,9 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                         ],
                       ),
                     ),
+
+
+
                     SizedBox(height: 5.h),
                     // Video Player Placeholder
                     Container(
@@ -252,7 +276,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    "Call",
+                                    "Chat",
                                     style: TextStyle(fontSize: 13.sp, color: Colors.black),
                                   ),
                                 ),
@@ -273,7 +297,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    "Chat",
+                                    "Track on map",
                                     style: TextStyle(fontSize: 13.sp, color: Colors.black),
                                   ),
                                 ),
@@ -294,7 +318,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    "Location",
+                                    "Reschedule",
                                     style: TextStyle(fontSize: 13.sp, color: Colors.black),
                                   ),
                                 ),
@@ -309,20 +333,49 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
               ),
               SizedBox(height: 20.h),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      // Handle Mark as Done button press
-                    },
-                    child: Text("Mark as Done"),
+                  Expanded(
+                      child: GestureDetector(
+                        onTap: (){
+                         },
+                        child: CustomSmallContainers(
+                          text: 'Mark as Done',
+                          height: 51.w,
+                          textStyle: jost500(19.sp, whiteColor),
+                        //  width: 150.w,
+                        ),
+                      )),
+                  SizedBox(
+                    width: 14.w,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Handle Cancel button press
-                    },
-                    child: Text("Cancel"),
-                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              backgroundColor: whiteColor,
+                              contentPadding: EdgeInsets.zero,
+                              content: CancelDialogBox(),
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        height: 51.w,
+                      //  width: 150.w,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(241, 241, 241, 1),
+                            borderRadius: BorderRadius.circular(8.r)),
+                        child: Center(
+                            child: Text(
+                              'Cancel',
+                              style: jost500(19.sp, skyblue),
+                            )),
+                      ),
+                    ),
+                  )
                 ],
               ),
               SizedBox(height: 26.h),

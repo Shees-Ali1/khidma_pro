@@ -12,6 +12,8 @@ String  apple = 'assets/images/apple.png';
 String  topEclipse = 'assets/images/topEclipse.png';
 String  gender = 'assets/images/gender.png';
 String  arrow_down = 'assets/images/arrow_down.png';
+String  calendar = 'assets/images/calendar.png';
+String  clock = 'assets/images/clock.png';
 
 
 // * Profile Images
