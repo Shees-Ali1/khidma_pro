@@ -206,8 +206,6 @@ class _TechReviewsState extends State<TechReviews> {
                           isDismissible: true,
                           enableDrag: true,
                           JobAcceptedBottomsheet(
-                            name: 'Ali',
-                            price: '69',
                           ),
                         );
                       },
