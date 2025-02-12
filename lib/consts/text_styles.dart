@@ -76,7 +76,8 @@ class TextStyles {
       letterSpacing: 0, // Set letter spacing
       color: backgroundColor, // Set the text color (you can adjust it)
     );
-  } static TextStyle dropDownText() {
+  }
+  static TextStyle dropDownText() {
     return GoogleFonts.jost( // Use GoogleFonts to load the Jost font
       fontWeight: FontWeight.normal
       , // Set bold weight for title
@@ -96,45 +97,69 @@ class TextStyles {
       color: skyblue, // Set the text color (you can adjust it)
     );
   }
+  static TextStyle serviceCardHead() {
+    return GoogleFonts.montserrat( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.w600
+      , // Set bold weight for title
+      fontSize: 10.85.sp, // Set the size in sp for scaling
+      height: 22.23 / 20, // Set line height (line height / font size)
+      letterSpacing: 0, // Set letter spacing
+      color: blackColor, // Set the text color (you can adjust it)
+    );
+  }
+
+  static TextStyle serviceCardLocation() {
+    return GoogleFonts.montserrat( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.w500
+      , // Set bold weight for title
+      fontSize: 11.85.sp, // Set the size in sp for scaling
+
+      color: backgroundColor, // Set the text color (you can adjust it)
+    );
+  }
+
+  static TextStyle serviceCardDescription() {
+    return GoogleFonts.montserrat( // Use GoogleFonts to load the Jost font
+      fontWeight: FontWeight.w500
+      , // Set bold weight for title
+      fontSize: 9.85.sp, // Set the size in sp for scaling
+
+      color: backgroundColor, // Set the text color (you can adjust it)
+    );
+  }
 }
 
-
 TextStyle jost700(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
+  return GoogleFonts.jost(
     fontWeight: FontWeight.w700,
     fontSize: fontSize,
     color: color,
   );
 }
 
-TextStyle jost500(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
-    fontWeight: FontWeight.w500,
-    fontSize: fontSize,
-    color: color,
-  );
-}
-
 TextStyle jost600(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
+  return GoogleFonts.jost(
     fontWeight: FontWeight.w600,
     fontSize: fontSize,
     color: color,
   );
 }
 
-TextStyle jost400(double fontSize, Color color) {
-  return TextStyle(
-    fontFamily: 'Jost',
-    fontWeight: FontWeight.w400,
+TextStyle jost500(double fontSize, Color color) {
+  return GoogleFonts.jost(
+    fontWeight: FontWeight.w500,
     fontSize: fontSize,
     color: color,
   );
 }
 
+TextStyle jost400(double fontSize, Color color) {
+  return GoogleFonts.jost(
+    fontWeight: FontWeight.w400,
+    fontSize: fontSize,
+    color: color,
+  );
+}
 TextStyle jost300(double fontSize, Color color) {
   return TextStyle(
     fontFamily: 'Jost',

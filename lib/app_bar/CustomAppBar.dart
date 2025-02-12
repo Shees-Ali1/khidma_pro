@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 
@@ -63,18 +64,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                 )
               else if (showBackArrow)
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    padding: const EdgeInsets.all(10.0),
+                GestureDetector(
+                  onTap: (){
+                    Get.back();
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.all(10.0),
 
-                    width: 38.w,
-                    height: 38.h,
-                    decoration: BoxDecoration(
-                      color: skyblue,
-                      shape: BoxShape.circle,
+                      width: 38.w,
+                      height: 38.h,
+                      decoration: BoxDecoration(
+                        color: skyblue,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Image.asset(back_arrow, color: backgroundColor), // Hamburger menu icon (3 bars)
                     ),
-                    child: Image.asset(back_arrow, color: backgroundColor), // Hamburger menu icon (3 bars)
                   ),
                 ),
               Text(
@@ -86,6 +92,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   // Conditionally show right-side icons
                   if (showNotificationsIcon)

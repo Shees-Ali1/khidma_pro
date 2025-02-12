@@ -3,6 +3,7 @@ import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';  // Import GetX package
 import '../Customer/Profile/userProfile.dart';
+import '../Service-Provider/Bookings/booking_page.dart';
 import '../Service-Provider/Home/home_page.dart';
 import '../consts/colors.dart';
 import '../consts/images.dart';
@@ -20,7 +21,7 @@ class BottomBar extends StatelessWidget {
 
     final List<Widget> screens = [
        HomePage(),
-      const BookingScreen(),
+       BookingPage(),
       const ChatScreen(),
       const ProfileScreen(),
     ];
@@ -137,16 +138,7 @@ class BottomBar extends StatelessWidget {
 }
 // Screens for Navigation
 
-class BookingScreen extends StatelessWidget {
-  const BookingScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Booking Screen", style: TextStyle(fontSize: 24))),
-    );
-  }
-}
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});

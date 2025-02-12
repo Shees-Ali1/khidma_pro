@@ -14,3 +14,4 @@ Color   black =  Color.fromRGBO(0, 0, 0, 1);
 Color   greenColor =  Color.fromRGBO(34, 218, 133, 1);
 Color   textfieldColor =  Color.fromRGBO(250, 250, 250, 1);
 Color   textfieldBorder =  Color.fromRGBO(226, 226, 226, 1);
+Color   ServiceCardgrey =  Color.fromRGBO(239, 239, 239, 1);

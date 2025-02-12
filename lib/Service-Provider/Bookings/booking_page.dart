@@ -12,18 +12,18 @@ import '../../widgets/MyPopupMenuButton.dart';
 import '../../widgets/ScrollableAnnouncementWidget.dart';
 import '../../widgets/service-card.dart';
 
-class HomePage extends StatelessWidget {
-   HomePage({super.key});
+class BookingPage extends StatelessWidget {
+  BookingPage({super.key});
   final AvailabilityController controller = Get.put(AvailabilityController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(
-        title: 'Home', // Title of the app
+        title: '', // Title of the app
         showDrawer: true, // Show drawer icon (true/false)
         showBackArrow: false, // Show back arrow if needed (true/false)
         showNotificationsIcon: true, // Show notifications icon (true/false)
-        showSettingsIcon: true, // Show settings icon (true/false)
+        showSettingsIcon: false, // Show settings icon (true/false)
       ),
       drawer: const CustomDrawer(), // Use the custom drawer here
       backgroundColor: backgroundColor,
@@ -35,29 +35,23 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               /// & TITLE
-              Padding(
-                padding:  EdgeInsets.only(top: 17.0.h,bottom: 17.0.h),
-                child: Text(
-                  "Hi Hugh Quinn",
-                  style: TextStyles.titleText(),
-                ),
-              ),
+
               /// & Announcement
-              const ScrollableAnnouncementWidget(),
+
               SizedBox(height: 7.h,),
               /// & Availability
-              const Availability(),
+
               SizedBox(height: 7.h,),
 
-              const Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  DropdownWidget(isEnabled: false,),
+                 Text("Bookings",style: jost700(24, skyblue),),
                   DropdownWidget(isEnabled: true,),
                 ],
               ),
               SizedBox(height: 7.h,),
-             const ServiceCard()
+              const ServiceCard()
 
 
             ],
