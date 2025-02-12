@@ -5,6 +5,7 @@ import 'package:get/get.dart';  // Import GetX package
 import 'package:khidma_pro/Customer/Home/taskDescription.dart';
 import 'package:khidma_pro/Customer/Home/user_home_screen.dart';
 import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
+import 'package:khidma_pro/Service-Provider/Bookings/booking_page.dart';
 import '../Customer/Profile/tech_reviews.dart';
 import '../Customer/Profile/userProfile.dart';
 import '../Service-Provider/Home/home_page.dart';
@@ -24,7 +25,7 @@ class UserBottomBar extends StatelessWidget {
 
     final List<Widget> screens = [
       UserHomeScreen(),
-       TaskDescription(),
+       BookingPage(),
       const WalletScreen(),
       const ProfileScreen(),
     ];

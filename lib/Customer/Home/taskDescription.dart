@@ -206,29 +206,32 @@ class TaskDescription extends StatelessWidget {
               SizedBox(height: 6.h),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 13.h),
-                height: 55.h,
+
                 width: 333.w,
                 decoration: BoxDecoration(
                   color: textfieldColor,
                   border: Border.all(color: textfieldBorder, width: 1.w),
                   borderRadius: BorderRadius.circular(8.r),
                 ),
+
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Describe your task',
                     border: InputBorder.none,
                   ),
+                  maxLines: null,
                   style: TextStyles.smallTextBlack(),
                 ),
               ),
-              SizedBox(height: 133.h),
+              SizedBox(height: 50.h),
               Center(
                 child: CustomButton(
                   text: 'Next',
                   onPressed: () {},
                   width: 311.w,
                 ),
-              )
+              ),
+              SizedBox(height: 50.h),
             ],
           ),
         ),

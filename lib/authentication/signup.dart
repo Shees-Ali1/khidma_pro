@@ -105,7 +105,7 @@ class SignupScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 24.w),
                 child: CustomDropdownField(
                   label: 'Select Gender',
-                  items: const ['Male', 'Female', 'Other'],
+                  items: const ['Male', 'Female',],
                   dropdownIconImage: arrow_down,
                   onChanged: (value) {},
                 ),

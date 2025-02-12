@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 
@@ -31,7 +32,7 @@ class CustomDropdownField extends StatefulWidget {
     this.prefixIcon,
     this.contentPadding,
     this.height,
-    this.dropdownIconImage, // Custom dropdown icon
+    this.dropdownIconImage,
   });
 
   @override
@@ -50,27 +51,25 @@ class _CustomDropdownFieldState extends State<CustomDropdownField> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: widget.height ?? 50.h, // Default height
+      height: widget.height ?? 50.h,
       child: DropdownButtonFormField<String>(
         value: _selectedValue,
-        icon: SizedBox.shrink(), // Removes default dropdown arrow
+        icon: SizedBox.shrink(),
         decoration: InputDecoration(
           floatingLabelBehavior: FloatingLabelBehavior.never,
           fillColor: textfieldColor,
           filled: true,
           labelText: widget.label,
           hintText: widget.hintText,
-          hintStyle: TextStyle(
+          hintStyle: GoogleFonts.jost(
             color: widget.hintTextColor ?? skyblue,
             fontSize: widget.hintTextSize ?? 14.65.sp,
             fontWeight: FontWeight.w400,
-            fontFamily: 'Jost',
           ),
-          labelStyle: TextStyle(
+          labelStyle: GoogleFonts.jost(
             color: widget.labelTextColor ?? skyblue,
             fontSize: widget.labelTextSize ?? 14.65.sp,
             fontWeight: FontWeight.w400,
-            fontFamily: 'Jost',
           ),
           prefixIcon: Padding(
             padding: const EdgeInsets.all(14.0),
@@ -89,7 +88,7 @@ class _CustomDropdownFieldState extends State<CustomDropdownField> {
               height: 20.h,
             ),
           )
-              : null, // Removes default suffix icon if no custom image is provided
+              : null,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(13.31.r),
             borderSide: BorderSide(color: textfieldBorder, width: 0.95.w),
@@ -102,18 +101,17 @@ class _CustomDropdownFieldState extends State<CustomDropdownField> {
             borderSide: BorderSide(color: textfieldBorder, width: 0.95.w),
             borderRadius: BorderRadius.circular(13.31.r),
           ),
-          contentPadding: widget.contentPadding,
+          contentPadding: EdgeInsets.symmetric(vertical: 1, horizontal: 5),
         ),
         items: widget.items
             .map((item) => DropdownMenuItem(
           value: item,
           child: Text(
             item,
-            style: TextStyle(
+            style: GoogleFonts.jost(
               color: skyblue,
               fontSize: 14.65.sp,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Jost',
             ),
           ),
         ))

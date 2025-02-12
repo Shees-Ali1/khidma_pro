@@ -135,7 +135,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
             borderSide: BorderSide(color: textfieldBorder, width: 0.95.w),
             borderRadius: BorderRadius.circular(13.31.r),
           ),
-          contentPadding: widget.contentPadding,
+          contentPadding: EdgeInsets.symmetric(vertical: 1,horizontal: 5),
         ),
         validator: widget.validator,
         onChanged: widget.onChanged,
