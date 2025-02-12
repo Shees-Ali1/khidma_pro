@@ -1,4 +1,5 @@
 String  tech_2 = 'assets/images/tech_2.png';
+String  serviceProvider = 'assets/images/serviceProvider.png';
 
 
 /// * Login Images
@@ -17,6 +18,7 @@ String  clock = 'assets/images/clock.png';
 String  bankImage = 'assets/images/ADCB.png';
 String  pencil = 'assets/images/pencil.png';
 String  withdraw = 'assets/images/withdraw.png';
+String  deepClean = 'assets/images/deepClean.png';
 
 
 // * Profile Images

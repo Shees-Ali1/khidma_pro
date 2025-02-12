@@ -9,6 +9,7 @@ import 'package:khidma_pro/widgets/buttons.dart';
 
 import '../Customer/Home/user_home_screen.dart';
 import '../consts/text_styles.dart';
+import '../techForm/main_techForm.dart';
 
 
 class RoleScreen extends StatefulWidget {
@@ -71,7 +72,7 @@ class _RoleScreenState extends State<RoleScreen> {
                     },
                     child: buildContainer(
                       'Customer',
-                      email,
+                      user,
                       isSelected: signupController.selectedIndex.value == 0, // Changed to .value
                     ),
                   ),
@@ -88,7 +89,7 @@ class _RoleScreenState extends State<RoleScreen> {
                     },
                     child: buildContainer(
                       'Technician',
-                      password,
+                      serviceProvider,
                       isSelected: signupController.selectedIndex.value == 1, // Changed to .value
                     ),
                   ),
@@ -103,13 +104,14 @@ class _RoleScreenState extends State<RoleScreen> {
            textColor: skyblue,
            width: 311.w,
            onPressed: () {
-      if (signupController.selectedIndex.value == 0) {
-      // Navigate to Customer Signup
-      //    Get.to(() => CustomerSignup()); // Use Get.to for navigation
-      } else if (signupController.selectedIndex.value == 1) {
-      // Navigate to Tech Signup
-     // Get.to(() => TechSignup()); // Use Get.to for navigation
-      }
+           Get.to(MainTechForm());
+     //  if (signupController.selectedIndex.value == 0) {
+     //  // Navigate to Customer Signup
+     //  //    Get.to(() => CustomerSignup()); // Use Get.to for navigation
+     //  } else if (signupController.selectedIndex.value == 1) {
+     //  // Navigate to Tech Signup
+     // // Get.to(() => TechSignup()); // Use Get.to for navigation
+     //  }
       },),
             SizedBox(
               height: 14.h,
@@ -168,7 +170,7 @@ class _RoleScreenState extends State<RoleScreen> {
         color: backgroundColor,
         borderRadius: BorderRadius.circular(16.r),
         border: isSelected
-            ? Border.all(color: Colors.red, width: 1)
+            ? Border.all(color: blackColor, width: 1)
             : Border.all(color: skyblue, width: 1),
       ),
       child: Padding(
@@ -183,11 +185,16 @@ class _RoleScreenState extends State<RoleScreen> {
                 shape: BoxShape.circle,
                 color: skyblue,
                 image: DecorationImage(
-                  scale: 5,
+                  scale: 2,
                   image: AssetImage(image),
+                  colorFilter: ColorFilter.mode(
+                    whiteColor, // Change the color and opacity
+                    BlendMode.srcATop, // Blend mode to apply the color
+                  ),
                 ),
               ),
             ),
+
             SizedBox(
               height: 29.h,
             ),

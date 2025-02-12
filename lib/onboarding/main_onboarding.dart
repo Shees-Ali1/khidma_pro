@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:khidma_pro/authentication/role_screen.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/onboarding/onboard4.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -31,7 +32,7 @@ class _MainOnBoardingViewState extends State<MainOnBoardingView> {
         curve: Curves.ease,
       );
     } else if (currentpage == 4) {
-      Get.offAll(LoginScreen());
+      Get.offAll(RoleScreen());
     }
   }
 

@@ -3,6 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/navbar_screens/User_navbar.dart';
+import 'package:khidma_pro/techForm/main_techForm.dart';
+import 'package:khidma_pro/techForm/personal.details.dart';
+import 'package:khidma_pro/techForm/tech_controller.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityController.dart';
 import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
 import 'controllers/auth_controllers/login_controller.dart';
@@ -22,6 +25,7 @@ void main() async {
   Get.put(AvailabilityController());
   Get.put(BottomBarController());
   Get.put(HomeController());
+  Get.put(TechController());
 
   // Run the app after initialization
   runApp(const MyApp());
@@ -41,7 +45,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: UserBottomBar(),
+          home: SplashScreen(),
         );
       },
     );
