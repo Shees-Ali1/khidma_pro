@@ -19,6 +19,7 @@ String  bankImage = 'assets/images/ADCB.png';
 String  pencil = 'assets/images/pencil.png';
 String  withdraw = 'assets/images/withdraw.png';
 String  deepClean = 'assets/images/deepClean.png';
+String  send = 'assets/images/send.png';
 
 
 // * Profile Images
