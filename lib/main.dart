@@ -7,6 +7,7 @@ import 'controllers/Service-Provider-Controller/Ui-Controllers/AvailabilityContr
 import 'controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
 import 'controllers/auth_controllers/login_controller.dart';
 import 'controllers/userControllers/homeController.dart';
+import 'navbar_screens/navbar.dart';
 import 'onboarding/splash_screen.dart';
 
 
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return const GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          home: UserBottomBar(),
+          home: BottomBar(),
         );
       },
     );

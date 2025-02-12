@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:khidma_pro/Customer/Home/task_description_video.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/text_styles.dart';
+
+import '../Service-Provider/DetailedServiceScreen/DetailedCard.dart';
 
 class ServiceCard extends StatelessWidget {
   const ServiceCard({super.key});
@@ -177,16 +182,21 @@ class ServiceCard extends StatelessWidget {
                             )
                           ],
                         )),
-                    Container(
-                      width: 98.w,
-                      height: 35.h,
-                      decoration: BoxDecoration(
-                          color: backgroundColor,
-                          borderRadius: BorderRadius.circular(12.r)),
-                      child: Center(
-                        child: Text(
-                          "View",
-                          style: TextStyles.availability(),
+                    GestureDetector(
+                      onTap: (){
+                        Get.to(DetailedCard(isInProgress: false,));
+                      },
+                      child: Container(
+                        width: 98.w,
+                        height: 35.h,
+                        decoration: BoxDecoration(
+                            color: backgroundColor,
+                            borderRadius: BorderRadius.circular(12.r)),
+                        child: Center(
+                          child: Text(
+                            "View",
+                            style: jost600(14, skyblue),
+                          ),
                         ),
                       ),
                     )

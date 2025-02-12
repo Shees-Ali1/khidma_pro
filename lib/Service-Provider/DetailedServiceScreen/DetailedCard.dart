@@ -13,14 +13,16 @@ import '../../drawer/CustomDrawer.dart';
 import '../../widgets/cancel_dialog_box.dart';
 import '../../widgets/smallContainers.dart';
 
-class TaskDescription_video extends StatefulWidget {
-  const TaskDescription_video({super.key, });
+class DetailedCard extends StatefulWidget {
+  final bool isInProgress; // Add a required boolean parameter
+
+  const DetailedCard({super.key, required this.isInProgress});
 
   @override
-  State<TaskDescription_video> createState() => _TaskDescription_videoState();
+  State<DetailedCard> createState() => _DetailedCardState();
 }
 
-class _TaskDescription_videoState extends State<TaskDescription_video> {
+class _DetailedCardState extends State<DetailedCard> {
   String formattedDate = "";
   String formattedTime = "";
 
@@ -139,44 +141,56 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  name,
-                                  style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold,color: whiteColor),
-                                ),
-                                SizedBox(height: 6.h),
-                                Row(
-                                  children: [
-                                    Icon(Icons.location_on, size: 15,color: whiteColor,),
-                                    SizedBox(width: 3.w),
-                                    Text(
-                                      city,
-                                      style: jost300(11.sp, whiteColor),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        name,
+                                        style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold,color: whiteColor),
+                                      ),
+                                      SizedBox(height: 6.h),
+                                      Row(
+                                        children: [
+                                          Icon(Icons.location_on, size: 15,color: whiteColor,),
+                                          SizedBox(width: 3.w),
+                                          Text(
+                                            city,
+                                            style: jost300(11.sp, whiteColor),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 5.h),
+                                      SizedBox(
+                                        width:174.w,
+                                        child: Text(
+                                            description,
+                                            style: jost300(11.sp, whiteColor)
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Container(
+                                    width: 98.w,
+                                    height: 82.h,
+                                    decoration: BoxDecoration(
+                                      border: Border.all(
+                                        width: 1
+                                      )
                                     ),
-                                  ],
-                                ),
-                                SizedBox(height: 5.h),
-                                Text(
-                                  description,
-                                  style: jost300(11.sp, whiteColor)
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: 110.h,
-                            width: 85.w,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(12.w),
-                              image: DecorationImage(
-                                image: AssetImage(calendar),
-                                fit: BoxFit.cover,
+                                  )
+                                ],
                               ),
-                            ),
+
+                            ],
                           ),
+
                         ],
                       ),
                     ),
@@ -266,6 +280,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                       ),
                     ),
                     SizedBox(height: 5.h),
+                    widget.isInProgress == true ?
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 14.w),
                       child: Row(
@@ -335,22 +350,23 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                           ),
                         ],
                       ),
-                    ),
+                    ):SizedBox(),
                   ],
                 ),
               ),
               SizedBox(height: 20.h),
+              widget.isInProgress == true ?
               Row(
                 children: [
                   Expanded(
                       child: GestureDetector(
                         onTap: (){
-                         },
+                        },
                         child: CustomSmallContainers(
                           text: 'Mark as Done',
                           height: 51.w,
                           textStyle: jost500(19.sp, whiteColor),
-                        //  width: 150.w,
+                          //  width: 150.w,
                         ),
                       )),
                   SizedBox(
@@ -372,7 +388,53 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                       },
                       child: Container(
                         height: 51.w,
-                      //  width: 150.w,
+                        //  width: 150.w,
+                        decoration: BoxDecoration(
+                            color: Color.fromRGBO(241, 241, 241, 1),
+                            borderRadius: BorderRadius.circular(8.r)),
+                        child: Center(
+                            child: Text(
+                              'Cancel',
+                              style: jost500(19.sp, skyblue),
+                            )),
+                      ),
+                    ),
+                  )
+                ],
+              ):
+              Row(
+                children: [
+                  Expanded(
+                      child: GestureDetector(
+                        onTap: (){
+                        },
+                        child: CustomSmallContainers(
+                          text: 'Accept',
+                          height: 51.w,
+                          textStyle: jost500(19.sp, whiteColor),
+                          //  width: 150.w,
+                        ),
+                      )),
+                  SizedBox(
+                    width: 14.w,
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              backgroundColor: whiteColor,
+                              contentPadding: EdgeInsets.zero,
+                              content: CancelDialogBox(),
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        height: 51.w,
+                        //  width: 150.w,
                         decoration: BoxDecoration(
                             color: Color.fromRGBO(241, 241, 241, 1),
                             borderRadius: BorderRadius.circular(8.r)),
