@@ -83,7 +83,7 @@ class ServiceCard extends StatelessWidget {
                                   backgroundColor), // Adjust the font size and color as needed
                             ),
                             SizedBox(
-                              width: 46.w,
+                              width: 26.w,
                             ),
                             Text(
                               "ID # 2145",

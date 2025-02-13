@@ -20,6 +20,9 @@ String  pencil = 'assets/images/pencil.png';
 String  withdraw = 'assets/images/withdraw.png';
 String  deepClean = 'assets/images/deepClean.png';
 String  send = 'assets/images/send.png';
+String  user1 = 'assets/images/user1.png';
+String  user2 = 'assets/images/user2.png';
+String  user3 = 'assets/images/user3.png';
 
 
 // * Profile Images

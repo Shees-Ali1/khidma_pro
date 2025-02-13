@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:khidma_pro/authentication/signup.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
 import 'package:khidma_pro/widgets/buttons.dart';
@@ -104,14 +105,14 @@ class _RoleScreenState extends State<RoleScreen> {
            textColor: skyblue,
            width: 311.w,
            onPressed: () {
-           Get.to(MainTechForm());
-     //  if (signupController.selectedIndex.value == 0) {
-     //  // Navigate to Customer Signup
-     //  //    Get.to(() => CustomerSignup()); // Use Get.to for navigation
-     //  } else if (signupController.selectedIndex.value == 1) {
-     //  // Navigate to Tech Signup
-     // // Get.to(() => TechSignup()); // Use Get.to for navigation
-     //  }
+       //    Get.to(MainTechForm());
+      if (signupController.selectedIndex.value == 0) {
+      // Navigate to Customer Signup
+          Get.to(() => SignupScreen()); // Use Get.to for navigation
+      } else if (signupController.selectedIndex.value == 1) {
+      // Navigate to Tech Signup
+      Get.to(() => MainTechForm()); // Use Get.to for navigation
+      }
       },),
             SizedBox(
               height: 14.h,

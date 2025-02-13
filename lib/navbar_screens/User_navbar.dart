@@ -6,6 +6,7 @@ import 'package:khidma_pro/Customer/Home/taskDescription.dart';
 import 'package:khidma_pro/Customer/Home/user_home_screen.dart';
 import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
 import 'package:khidma_pro/Service-Provider/Bookings/booking_page.dart';
+import 'package:khidma_pro/techForm/chatScreen.dart';
 import '../Customer/Profile/tech_reviews.dart';
 import '../Customer/Profile/userProfile.dart';
 import '../Service-Provider/Home/home_page.dart';
@@ -13,6 +14,7 @@ import '../consts/colors.dart';
 import '../consts/images.dart';
 import '../consts/text_styles.dart';
 import '../controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
+import 'navbar.dart';
 
 
 class UserBottomBar extends StatelessWidget {
@@ -26,7 +28,7 @@ class UserBottomBar extends StatelessWidget {
     final List<Widget> screens = [
       UserHomeScreen(),
        BookingPage(),
-      const WalletScreen(),
+      const ChatsScreenMain(),
       const ProfileScreen(),
     ];
 
@@ -149,17 +151,6 @@ class BookingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(child: Text("Booking Screen", style: TextStyle(fontSize: 24))),
-    );
-  }
-}
-
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Chat Screen", style: TextStyle(fontSize: 24))),
     );
   }
 }
