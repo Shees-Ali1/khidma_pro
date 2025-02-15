@@ -184,7 +184,7 @@ class ServiceCard extends StatelessWidget {
                         )),
                     GestureDetector(
                       onTap: (){
-                        Get.to(DetailedCard(isInProgress: false,));
+                        Get.to(DetailedCard(isInProgress: true,));
                       },
                       child: Container(
                         width: 98.w,

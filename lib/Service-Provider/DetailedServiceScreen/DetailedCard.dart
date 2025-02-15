@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
+import 'package:khidma_pro/widgets/leave_reviewDialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_bar/CustomAppBar.dart';
@@ -66,13 +67,7 @@ class _DetailedCardState extends State<DetailedCard> {
     final double latitude = 40.7128;
     final double longitude = -74.0060;
     final String voiceNoteUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
-    final List<String> imageUrls = [
-      "https://via.placeholder.com/150",
-      "https://via.placeholder.com/150",
-    ];
-    final List<String> videoUrl = [
-      "https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
-    ];
+
 
     return Scaffold(
 
@@ -250,14 +245,15 @@ class _DetailedCardState extends State<DetailedCard> {
 
                     SizedBox(height: 5.h),
                     // Video Player Placeholder
-                    const VideoPlayerWidget(
-                     videoUrl:
-                     'https://firebasestorage.googleapis.com/v0/b/reapairoo.firebasestorage.app/o/Plumbing%2Fvideos%2F5846572e-1212-48cc-bf3e-c0ee9599a132.MOV?alt=media&token=603d19cc-e090-42ff-9f93-41665f70da5c',),
+                  const VideoPlayerWidget(
+                    videoUrl: 'https://www.w3schools.com/html/mov_bbb.mp4',
+                  ),
 
-
-                    SizedBox(height: 5.h),
+                  SizedBox(height: 5.h),
                     // Voice Note Placeholder
-                    VoiceNoteWidget(audioUrl: 'https://firebasestorage.googleapis.com/v0/b/reapairoo.firebasestorage.app/o/Gardening%2FvoiceNotes%2Facb90177-eb4d-4ba1-b245-215c0ccdde34.m4a?alt=media&token=5d9171ab-b036-48b0-bf86-db342a3634a2',),
+                  VoiceNoteWidget(
+                    audioUrl: 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3',
+                  ),
                     SizedBox(height: 5.h),
                     widget.isInProgress == true ?
                     Padding(
@@ -340,6 +336,16 @@ class _DetailedCardState extends State<DetailedCard> {
                   Expanded(
                       child: GestureDetector(
                         onTap: (){
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                backgroundColor: whiteColor,
+                                contentPadding: EdgeInsets.zero,
+                                content: LeaveReviewDialog(),
+                              );
+                            },
+                          );
                         },
                         child: CustomSmallContainers(
                           text: 'Mark as Done',

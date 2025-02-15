@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
+import 'package:khidma_pro/checkReviews.dart';
 import '../../app_bar/CAppBar.dart';
 import '../../authentication/role_screen.dart';
 import '../../consts/colors.dart';
 import '../../consts/images.dart';
 import '../../consts/text_styles.dart';
+import '../../editProfileScreeen.dart';
 
 
 
@@ -71,7 +73,7 @@ class _EditProfileScreenState extends State<ProfileScreen> {
               ProfileButton(
                 onPressed: () {
                   // Navigate to the EditProfileScreen
-             //     Get.to(EditProfileScreen());
+                  Get.to(EditProfileScreen());
                 },
                 label: "General Information",
                 iconPath: user,
@@ -82,7 +84,7 @@ class _EditProfileScreenState extends State<ProfileScreen> {
               /// Bio and Experience
               ProfileButton(
                 onPressed: () {
-             //     Get.to(BioAndExperienceMain());
+                  Get.to(CheckReviews());
                 },
                 label: "Saved Address",
                 iconPath: walletFill,
