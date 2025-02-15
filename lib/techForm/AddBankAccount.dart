@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:khidma_pro/app_bar/CustomAppBar.dart';
 import 'package:khidma_pro/consts/colors.dart';
 
-import '../Customer/pro_wallet.dart';
+import '../Service-Provider/pro_wallet.dart';
 import '../consts/text_styles.dart';
 import '../widgets/textfield.dart';
 

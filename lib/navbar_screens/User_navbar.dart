@@ -7,7 +7,7 @@ import 'package:khidma_pro/Customer/Home/user_home_screen.dart';
 import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
 import 'package:khidma_pro/Service-Provider/Bookings/booking_page.dart';
 import 'package:khidma_pro/techForm/chatScreen.dart';
-import '../Customer/Profile/tech_reviews.dart';
+import '../Service-Provider/tech_reviews.dart';
 import '../Customer/Profile/userProfile.dart';
 import '../Service-Provider/Home/home_page.dart';
 import '../consts/colors.dart';

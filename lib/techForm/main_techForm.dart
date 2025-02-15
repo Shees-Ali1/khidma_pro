@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/app_bar/CAppBar.dart';
 import 'package:khidma_pro/consts/colors.dart';
+import 'package:khidma_pro/techForm/details.dart';
 import 'package:khidma_pro/techForm/personal.details.dart';
 import 'package:khidma_pro/techForm/tech_controller.dart';
 import 'package:khidma_pro/techForm/tech_services.dart';
@@ -127,7 +128,7 @@ class _TechSignupState extends State<MainTechForm> {
 
                       return ServicesScreen();
                     case "2":
-                      return Text("");
+                      return Details();
                     case "3":
 
                       return DocumentsScreen();

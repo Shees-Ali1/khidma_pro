@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 import 'package:khidma_pro/consts/images.dart';
 import 'package:khidma_pro/widgets/smallContainers.dart';
 
-import '../../app_bar/CAppBar.dart';
-import '../../consts/colors.dart';
-import '../../consts/text_styles.dart';
-import '../../widgets/cancel_dialog_box.dart';
-import '../../widgets/paymentBottomSheet.dart';
-import '../../widgets/serviceAccepted.dart';
+import '../app_bar/CAppBar.dart';
+import '../consts/colors.dart';
+import '../consts/text_styles.dart';
+import '../widgets/cancel_dialog_box.dart';
+import '../widgets/paymentBottomSheet.dart';
+import '../widgets/serviceAccepted.dart';
 
 class TechReviews extends StatefulWidget {
   const TechReviews({super.key});

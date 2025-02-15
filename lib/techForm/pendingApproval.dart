@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:khidma_pro/consts/colors.dart';
+import 'package:khidma_pro/navbar_screens/navbar.dart';
 import 'package:khidma_pro/widgets/buttons.dart';
 
 import '../authentication/login.dart';
@@ -47,7 +48,7 @@ class PendingApproval extends StatelessWidget {
                 if (isAccountVerified()) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                    MaterialPageRoute(builder: (context) => BottomBar()),
                   );
                 } else {
                   showDialog(
