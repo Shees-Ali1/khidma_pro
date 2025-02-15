@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';  // Import GetX package
+import 'package:khidma_pro/techForm/chatScreen.dart';
 import '../Customer/Profile/userProfile.dart';
 import '../Service-Provider/Bookings/booking_page.dart';
 import '../Service-Provider/Home/home_page.dart';
@@ -22,7 +23,7 @@ class BottomBar extends StatelessWidget {
     final List<Widget> screens = [
        HomePage(),
        BookingPage(),
-      const ChatScreen(),
+      const ChatsScreenMain(),
       const ProfileScreen(),
     ];
 
@@ -140,15 +141,6 @@ class BottomBar extends StatelessWidget {
 
 
 
-class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Chat Screen", style: TextStyle(fontSize: 24))),
-    );
-  }
-}
 
 

@@ -106,7 +106,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       child: Center(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Image.asset(wallet),
+                          child: Image.asset(notification),
                         ),
                       ),
                     ),
