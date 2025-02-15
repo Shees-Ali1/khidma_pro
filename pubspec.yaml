@@ -49,6 +49,10 @@ dependencies:
   geolocator: ^10.1.0
   google_maps_flutter: ^2.1.1
   font_awesome_flutter:
+  video_player:
+  chewie:
+  audioplayers:
+  waveform_flutter:
 dev_dependencies:
   flutter_test:
     sdk: flutter

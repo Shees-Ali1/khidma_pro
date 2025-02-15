@@ -10,6 +10,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../app_bar/CustomAppBar.dart';
 import '../../consts/text_styles.dart';
 import '../../drawer/CustomDrawer.dart';
+import '../../widgets/VideoPlayerWidget.dart';
+import '../../widgets/VoiceNoteWidget.dart';
 import '../../widgets/cancel_dialog_box.dart';
 import '../../widgets/smallContainers.dart';
 
@@ -176,15 +178,14 @@ class _DetailedCardState extends State<DetailedCard> {
                                       ),
                                     ],
                                   ),
-                                  Container(
-                                    width: 98.w,
-                                    height: 82.h,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(
-                                        width: 1
-                                      )
-                                    ),
-                                  )
+                                  SizedBox(width: 31.w,),
+
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(12.r),
+                                    child: Image.asset("assets/images/Service.png",fit: BoxFit.cover,  width: 98.w,
+                                        height: 82.h,),
+                                  ),
+
                                 ],
                               ),
 
@@ -249,36 +250,14 @@ class _DetailedCardState extends State<DetailedCard> {
 
                     SizedBox(height: 5.h),
                     // Video Player Placeholder
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 14.w),
-                      height: 189.h,
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Video Player Placeholder",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
+                    const VideoPlayerWidget(
+                     videoUrl:
+                     'https://firebasestorage.googleapis.com/v0/b/reapairoo.firebasestorage.app/o/Plumbing%2Fvideos%2F5846572e-1212-48cc-bf3e-c0ee9599a132.MOV?alt=media&token=603d19cc-e090-42ff-9f93-41665f70da5c',),
+
+
                     SizedBox(height: 5.h),
                     // Voice Note Placeholder
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 14.w),
-                      height: 50.h,
-                      decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(12.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Voice Note Placeholder",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ),
+                    VoiceNoteWidget(audioUrl: 'https://firebasestorage.googleapis.com/v0/b/reapairoo.firebasestorage.app/o/Gardening%2FvoiceNotes%2Facb90177-eb4d-4ba1-b245-215c0ccdde34.m4a?alt=media&token=5d9171ab-b036-48b0-bf86-db342a3634a2',),
                     SizedBox(height: 5.h),
                     widget.isInProgress == true ?
                     Padding(
