@@ -36,7 +36,7 @@ class _PersonalDetailsFormState extends State<PersonalDetailsForm> {
           Center(
             child: Text(
               'Enter Your Personal Details here.',
-              style: jost600(15.17.sp, Color(0xff6B7280)),
+              style: jost600(15.17.sp, greyColor),
             ),
           ),
           SizedBox(height: 56.h),

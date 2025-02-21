@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:khidma_pro/consts/colors.dart';
+
+import '../consts/images.dart';
 
 
 class CAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -58,19 +61,33 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           // Menu or Back Button
           Container(
-            padding: EdgeInsets.all(5),
+            padding: const EdgeInsets.all(5.0),
+            width: 38.w,
+            height: 38.h,
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
               color: skyblue,
-
+              shape: BoxShape.circle,
             ),
-            child: InkWell(
-              onTap: isMenu == true
-                  ? onMenuTap ?? () {}
-                  : onBackTap ?? () {},
-              child: Icon(Icons.menu, size: 34.h,color: whiteColor,),
-            ),
+            child: isMenu
+                ? Icon(Icons.menu, color: backgroundColor, size: 24.h) // Hamburger menu
+                : GestureDetector(
+                 onTap: (){
+                   Get.back();
+                 },
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: Image.asset(
+                                  back_arrow,
+                                  color: backgroundColor,
+                                  height: 24.h,  // Adjust the height if needed
+                                  width: 24.h,
+                                ),
+                  ),
+                ), // Back arrow image
           ),
+
+
+
 
           // Title or Search Field
           if (isTitle == true || isTextField == true)

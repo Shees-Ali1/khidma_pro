@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:khidma_pro/consts/images.dart';
+import 'package:khidma_pro/widgets/MyPopupMenuButton.dart';
+import 'package:khidma_pro/widgets/cancel_dialog_box.dart';
+import 'package:khidma_pro/widgets/serviceAccepted.dart';
 import 'package:khidma_pro/widgets/smallContainers.dart';
 
-import '../../app_bar/CAppBar.dart';
-import '../../consts/colors.dart';
-import '../../consts/text_styles.dart';
-import '../../widgets/cancel_dialog_box.dart';
-import '../../widgets/paymentBottomSheet.dart';
-import '../../widgets/serviceAccepted.dart';
+import 'app_bar/CAppBar.dart';
+import 'consts/colors.dart';
+import 'consts/images.dart';
+import 'consts/text_styles.dart';
 
-class TechReviews extends StatefulWidget {
-  const TechReviews({super.key});
+class CheckReviews extends StatefulWidget {
+  const CheckReviews({super.key});
 
   @override
-  _TechReviewsState createState() => _TechReviewsState();
+  State<CheckReviews> createState() => _CheckReviewsState();
 }
 
-class _TechReviewsState extends State<TechReviews> {
+class _CheckReviewsState extends State<CheckReviews> {
   final Map<String, List<Map<String, String>>> reviewsData = {
     "5 stars": [
       {
         "name": "Ryosuke Tanaka",
         "date": "August 5, 2023",
         "comment":
-            "Natalie offers an impressive array of features and resources, making it a truly awesome tool for learning, fantastic choice for anyone looking to enhance their learning journey.",
+        "Natalie offers an impressive array of features and resources, making it a truly awesome tool for learning, fantastic choice for anyone looking to enhance their learning journey.",
       },
       {
         "name": "John Doe",
@@ -35,7 +35,8 @@ class _TechReviewsState extends State<TechReviews> {
       },
     ],
   };
-
+  final RxString selectedOption = '5 stars'.obs; // Default selected option
+  final List<String> options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -61,33 +62,11 @@ class _TechReviewsState extends State<TechReviews> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 24.h),
-                Row(
-                  children: [
-                    SizedBox(
-                        height: 76.h, width: 90.w, child: Image.asset(tech_2)),
-                    SizedBox(width: 9.w),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('Natalie Hales', style: jost600(16.sp, skyblue)),
-                        SizedBox(height: 5.h),
-                        Text('10+ years of experience in cleaning',
-                            style: jost500(10.sp, skyblue)),
-                        SizedBox(height: 5.h),
-                        Row(
-                          children: [
-                            Text('200', style: jost600(24.sp, skyblue)),
-                            Text('AED', style: jost400(13.sp, skyblue)),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                DropdownWidget(isEnabled: true,),
                 SizedBox(height: 26.h),
                 Container(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
+                  EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
                   decoration: BoxDecoration(
                     color: skyblue,
                     borderRadius: BorderRadius.circular(14.r),
@@ -98,7 +77,7 @@ class _TechReviewsState extends State<TechReviews> {
                       Row(
                         children: List.generate(
                           4,
-                          (index) => Padding(
+                              (index) => Padding(
                             padding: EdgeInsets.symmetric(horizontal: 7.w),
                             child: Icon(
                               FontAwesomeIcons.solidStar,
@@ -107,15 +86,15 @@ class _TechReviewsState extends State<TechReviews> {
                             ),
                           ),
                         )..add(
-                            Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 7.w),
-                              child: Icon(
-                                FontAwesomeIcons.star,
-                                color: Colors.yellowAccent,
-                                size: 30.w,
-                              ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 7.w),
+                            child: Icon(
+                              FontAwesomeIcons.star,
+                              color: Colors.yellowAccent,
+                              size: 30.w,
                             ),
                           ),
+                        ),
                       ),
                       Column(
                         children: [
@@ -127,6 +106,37 @@ class _TechReviewsState extends State<TechReviews> {
                   ),
                 ),
                 SizedBox(height: 20.h),
+                Obx(() => Container(
+                  height: 26.h,
+                  width: 87.w,
+                  padding: EdgeInsets.symmetric(horizontal: 10.w),
+                  decoration: BoxDecoration(
+                    color: skyblue,
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: selectedOption.value,
+                      dropdownColor: skyblue,
+                      icon: Icon(Icons.keyboard_arrow_down, color: Colors.white,size: 20,),
+                      style: TextStyle(color: Colors.white), // Text color of selected item
+                      onChanged: (newValue) {
+                        if (newValue != null) {
+                          selectedOption.value = newValue;
+                        }
+                      },
+                      items: options.map((String option) {
+                        return DropdownMenuItem<String>(
+                          value: option,
+                          child: Text(option, style: jost400(11.sp, whiteColor)),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                )),
+                SizedBox(height: 20.h),
+
+
                 Column(
                   children: reviewsData["5 stars"]!.map((review) {
                     return Container(
@@ -165,7 +175,7 @@ class _TechReviewsState extends State<TechReviews> {
                                       Row(
                                         children: List.generate(
                                           5,
-                                          (index) => Padding(
+                                              (index) => Padding(
                                             padding: EdgeInsets.symmetric(
                                                 horizontal: 2.w),
                                             child: Icon(
@@ -196,57 +206,7 @@ class _TechReviewsState extends State<TechReviews> {
                 SizedBox(
                   height: 12.h,
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                        child: GestureDetector(
-                      onTap: () {
-                        Get.bottomSheet(
-                          isScrollControlled: true,
-                          isDismissible: true,
-                          enableDrag: true,
-                          JobAcceptedBottomsheet(
-                          ),
-                        );
-                      },
-                      child: CustomSmallContainers(
-                        text: 'Accept',
-                        height: 56.w,
-                        textStyle: jost600(22.sp, whiteColor),
-                        width: 150.w,
-                      ),
-                    )),
-                    SizedBox(
-                      width: 14.w,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return AlertDialog(
-                              backgroundColor: whiteColor,
-                              contentPadding: EdgeInsets.zero,
-                              content: CancelDialogBox(),
-                            );
-                          },
-                        );
-                      },
-                      child: Container(
-                        height: 56.w,
-                        width: 150.w,
-                        decoration: BoxDecoration(
-                            color: Color.fromRGBO(241, 241, 241, 1),
-                            borderRadius: BorderRadius.circular(8.r)),
-                        child: Center(
-                            child: Text(
-                          'Cancel',
-                          style: jost600(22.sp, skyblue),
-                        )),
-                      ),
-                    )
-                  ],
-                )
+
               ],
             ),
           ),
