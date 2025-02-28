@@ -1,5 +1,7 @@
 String  tech_2 = 'assets/images/tech_2.png';
 String  serviceProvider = 'assets/images/serviceProvider.png';
+String  star = 'assets/images/star2.png';
+String  reports = 'assets/images/reports.png';
 
 
 /// * Login Images
@@ -78,6 +80,7 @@ String  profile = 'assets/nav-icon/Profile.png';
 String  wallet = 'assets/app-bar/wallet.png';
 String  notification ='assets/app-bar/notification.png';
 String  back_arrow ='assets/app-bar/back_arrow.png';
+String  search ='assets/app-bar/search.png';
 
 
 /// *APP BAR IMAGES

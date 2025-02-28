@@ -88,7 +88,6 @@ class CAppBar extends StatelessWidget implements PreferredSizeWidget {
 
 
 
-
           // Title or Search Field
           if (isTitle == true || isTextField == true)
             SizedBox(width: 12.w),

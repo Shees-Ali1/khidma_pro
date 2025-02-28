@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:khidma_pro/app_bar/CustomAppBar.dart';
 import 'package:khidma_pro/consts/colors.dart';
 
+import '../notifications.dart';
 import 'chat_Item.dart';
 
 class ChatsScreenMain extends StatelessWidget {
@@ -14,7 +15,8 @@ class ChatsScreenMain extends StatelessWidget {
 //    final NavBarController navBarController = Get.find<NavBarController>();
 
     return Scaffold(
-     appBar: CustomAppBar(showDrawer: true,showNotificationsIcon: true,title: '',),
+     appBar: CustomAppBar(showDrawer: true,showNotificationsIcon: true,title: '',        onNotificationsTap: () => Get.to(Notifications()),
+     ),
       backgroundColor: backgroundColor,
       body: GestureDetector(
         onTap: (){

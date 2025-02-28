@@ -45,7 +45,7 @@ class ChatItem extends StatelessWidget {
                     width: 61.w, // Set your desired width for the image
                     child: Image.asset(
                       profileImage, // Use the image asset path
-                      fit: BoxFit.cover, // Maintain aspect ratio
+                      fit: BoxFit.contain, // Maintain aspect ratio
                     ),
                   ),
                 ),

@@ -45,9 +45,9 @@ class CustomSmallContainers extends StatelessWidget {
         height: height ?? 30.h,
         width: width ?? 100.w,
         decoration: BoxDecoration(
-          color: isSelected
+          color: color ?? (isSelected
               ? (selectedColor ?? greyColor)
-              : (unselectedColor ?? skyblue),
+              : (unselectedColor ?? skyblue)), // Prioritize color if provided
           borderRadius: BorderRadius.circular(borderRadius ?? 8),
           boxShadow: [
             BoxShadow(

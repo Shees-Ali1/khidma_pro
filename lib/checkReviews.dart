@@ -36,7 +36,7 @@ class _CheckReviewsState extends State<CheckReviews> {
     ],
   };
   final RxString selectedOption = '5 stars'.obs; // Default selected option
-  final List<String> options = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
+  final List<String> options = ['5 stars', '4 stars', '3 stars', '2 stars', '1 star'];
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -48,7 +48,7 @@ class _CheckReviewsState extends State<CheckReviews> {
           isMenu: false,
           isNotification: false,
           isTitle: true,
-          title: 'Natalie Hales',
+          title: 'Reviews',
           isSecondIcon: false,
           onBackTap: () {
             Get.back();
@@ -61,8 +61,8 @@ class _CheckReviewsState extends State<CheckReviews> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 24.h),
-                DropdownWidget(isEnabled: true,),
+                // SizedBox(height: 24.h),
+                // DropdownWidget(isEnabled: true,),
                 SizedBox(height: 26.h),
                 Container(
                   padding:

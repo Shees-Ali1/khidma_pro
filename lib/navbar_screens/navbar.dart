@@ -10,6 +10,7 @@ import '../consts/colors.dart';
 import '../consts/images.dart';
 import '../consts/text_styles.dart';
 import '../controllers/Service-Provider-Controller/Ui-Controllers/BottomBarController.dart';
+import '../pro_Profile.dart';
 
 
 class BottomBar extends StatelessWidget {
@@ -23,8 +24,8 @@ class BottomBar extends StatelessWidget {
     final List<Widget> screens = [
        HomePage(),
        BookingPage(),
-      const ChatsScreenMain(),
-      const ProfileScreen(),
+       ChatsScreenMain(),
+       ProProfileScreen(),
     ];
 
     return Scaffold(

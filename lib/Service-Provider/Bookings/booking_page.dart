@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/consts/colors.dart';
+import 'package:khidma_pro/notifications.dart';
 
 import '../../app_bar/CustomAppBar.dart';
 import '../../consts/text_styles.dart';
@@ -18,12 +19,13 @@ class BookingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(
+      appBar:  CustomAppBar(
         title: '', // Title of the app
         showDrawer: true, // Show drawer icon (true/false)
         showBackArrow: false, // Show back arrow if needed (true/false)
-        showNotificationsIcon: true, // Show notifications icon (true/false)
-        showSettingsIcon: false, // Show settings icon (true/false)
+        showNotificationsIcon: true,
+        onNotificationsTap: () => Get.to(Notifications()),
+        showSettingsIcon: false,
       ),
       drawer: const CustomDrawer(), // Use the custom drawer here
       backgroundColor: backgroundColor,

@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:khidma_pro/consts/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -88,7 +89,7 @@ class _SlidingMenuState extends State<SlidingMenu> {
                 effect: ExpandingDotsEffect(
                   dotHeight: 8.w,
                   dotWidth: 8.w,
-                  activeDotColor: Colors.black,
+                  activeDotColor:skyblue,
                   dotColor: Colors.grey,
                 ),
               );

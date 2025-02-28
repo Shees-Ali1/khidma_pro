@@ -12,6 +12,8 @@ import 'package:khidma_pro/widgets/smallContainers.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import 'OfferScreens/SearchOfferScreen.dart';
+
 
 
 class TaskDescription extends StatelessWidget {
@@ -41,11 +43,53 @@ class TaskDescription extends StatelessWidget {
       initialDate: DateTime.now(),
       firstDate: DateTime.now(),
       lastDate: DateTime(2100),
+      builder: (BuildContext context, Widget? child) {
+        return Theme(
+          data: ThemeData.light().copyWith(
+            primaryColor: skyblue, // Header background color
+            hintColor: skyblue, // Selection color for dates
+            colorScheme: ColorScheme.light(
+              primary: skyblue, // Selected date circle and buttons
+              onPrimary: Colors.white, // Text/icon color on primary (e.g., OK button text)
+              surface: Colors.white, // Background of the picker
+              onSurface: Colors.black, // Text color for dates
+            ),
+            textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+                foregroundColor: skyblue, // OK/Cancel button text color
+              ),
+            ),
+            dialogBackgroundColor: Colors.white, // Overall dialog background
+          ),
+          child: child!,
+        );
+      },
     );
     if (selectedDate != null) {
       TimeOfDay? selectedTime = await showTimePicker(
         context: Get.context!,
         initialTime: TimeOfDay.now(),
+        builder: (BuildContext context, Widget? child) {
+          return Theme(
+            data: ThemeData.light().copyWith(
+              primaryColor: skyblue, // Header background color
+              hintColor: skyblue, // Selection color for time
+              colorScheme: ColorScheme.light(
+                primary: skyblue, // Selected time highlight and buttons
+                onPrimary: Colors.white, // Text/icon color on primary
+                surface: Colors.white, // Background of the picker
+                onSurface: Colors.black, // Text color for time
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                  foregroundColor: skyblue, // OK/Cancel button text color
+                ),
+              ),
+              dialogBackgroundColor: Colors.white, // Overall dialog background
+            ),
+            child: child!,
+          );
+        },
       );
       if (selectedTime != null) {
         // Handle the selected date and time
@@ -53,7 +97,6 @@ class TaskDescription extends StatelessWidget {
       }
     }
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -223,12 +266,16 @@ class TaskDescription extends StatelessWidget {
                   style: TextStyles.smallTextBlack(),
                 ),
               ),
-              SizedBox(height: 50.h),
+              SizedBox(height: 150.h),
               Center(
-                child: CustomButton(
-                  text: 'Next',
-                  onPressed: () {},
-                  width: 311.w,
+                child: GestureDetector(
+                  child: CustomButton(
+                    text: 'Next',
+                    onPressed: () {
+                      Get.to(SearchOfferScreen());
+                    },
+                    width: 311.w,
+                  ),
                 ),
               ),
               SizedBox(height: 50.h),

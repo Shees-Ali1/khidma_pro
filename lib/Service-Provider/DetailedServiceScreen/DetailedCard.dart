@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
+import 'package:khidma_pro/techForm/chatScreenDetail.dart';
 import 'package:khidma_pro/widgets/leave_reviewDialog.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -237,6 +239,22 @@ class _DetailedCardState extends State<DetailedCard> {
                               ),
                             ),
                           ),
+                          SizedBox(width: 10.w,),
+                          widget.isInProgress == true?
+                          Container(
+                            width: 98.w,
+                            height: 35.h,
+                            decoration: BoxDecoration(
+                                color: backgroundColor,
+                                borderRadius: BorderRadius.circular(12.r)),
+                            child: Center(
+                              child: Text(
+                                "View",
+                                style: jost600(14, skyblue),
+                              ),
+                            ),
+                          ):
+                              SizedBox()
                         ],
                       ),
                     ),
@@ -251,8 +269,8 @@ class _DetailedCardState extends State<DetailedCard> {
 
                   SizedBox(height: 5.h),
                     // Voice Note Placeholder
-                  VoiceNoteWidget(
-                    audioUrl: 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3',
+                    VoiceNotePlayerUI(
+                      voiceNoteUrl: 'https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3',
                   ),
                     SizedBox(height: 5.h),
                     widget.isInProgress == true ?
@@ -263,8 +281,8 @@ class _DetailedCardState extends State<DetailedCard> {
                         children: [
                           Expanded(
                             child: GestureDetector(
-                              onTap: () {
-                                // Handle Call button press
+                              onTap: (){
+                            Get.to( ChatScreenDetail());
                               },
                               child: Container(
                                 padding: EdgeInsets.symmetric(vertical: 12.h),

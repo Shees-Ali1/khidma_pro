@@ -74,12 +74,10 @@ class ChatScreenDetail extends StatelessWidget {
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
-                            child: ClipOval(
-                              child: Image.asset(
-                                profile_image,
-                                fit: BoxFit
-                                    .cover, // Ensures the image fills the circle container
-                              ),
+                            child: Image.asset(
+                              profile_image,
+                              fit: BoxFit
+                                  .contain, // Ensures the image fills the circle container
                             ),
                           ),
                           SizedBox(width: 7.w),

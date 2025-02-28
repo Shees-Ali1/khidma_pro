@@ -53,6 +53,7 @@ dependencies:
   chewie:
   audioplayers:
   waveform_flutter:
+  flutter_spinkit: ^5.2.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

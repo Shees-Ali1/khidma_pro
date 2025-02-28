@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
+import 'package:khidma_pro/techForm/chatScreenDetail.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../app_bar/CustomAppBar.dart';
@@ -274,7 +275,7 @@ class _TaskDescription_videoState extends State<TaskDescription_video> {
                           Expanded(
                             child: GestureDetector(
                               onTap: () {
-                                // Handle Call button press
+                                ChatScreenDetail();
                               },
                               child: Container(
                                 padding: EdgeInsets.symmetric(vertical: 12.h),
