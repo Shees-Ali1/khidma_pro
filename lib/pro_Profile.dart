@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:khidma_pro/Customer/Home/wallet_screen.dart';
 import 'package:khidma_pro/checkReviews.dart';
+import 'package:khidma_pro/techForm/main_techForm.dart';
 import '../../app_bar/CAppBar.dart';
 import '../../authentication/role_screen.dart';
 import '../../consts/colors.dart';
@@ -83,7 +84,7 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
               /// Bio and Experience
               ProfileButton(
                 onPressed: () {
-                  Get.to(CheckReviews());
+                  Get.to(MainTechForm());
                 },
                 label: "Bio and Experience",
                 iconPath: walletFill,
@@ -92,7 +93,7 @@ class _ProProfileScreenState extends State<ProProfileScreen> {
 
               ProfileButton(
                 onPressed: () {
-                  Get.to(WalletScreen());
+                  Get.to(CheckReviews());
                 },
                 label: "Reviews",
                 iconPath:star ,

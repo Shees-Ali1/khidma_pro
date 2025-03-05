@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:khidma_pro/add_bank.dart';
 import 'package:khidma_pro/app_bar/CAppBar.dart';
 import 'package:khidma_pro/consts/colors.dart';
 import 'package:khidma_pro/consts/images.dart';
@@ -14,6 +15,7 @@ class ProWallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: CAppBar(
         isMenu: false,
         isNotification: false,
@@ -79,7 +81,7 @@ class ProWallet extends StatelessWidget {
                   Spacer(),
                   GestureDetector(
                     onTap: () {
-                      //  Get.to(Wallet());
+                        Get.to(PaymentMethod());
                     },
                     child: Container(
                       height: 35.h,
